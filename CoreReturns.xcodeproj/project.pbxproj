@@ -7,14 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		691733571DD3355800AED7B2 /* bill.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 691733561DD3355800AED7B2 /* bill.pdf */; };
 		6988FA451DCDB12A001C7AAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6988FA441DCDB12A001C7AAA /* AppDelegate.swift */; };
-		6988FA471DCDB12A001C7AAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6988FA461DCDB12A001C7AAA /* ViewController.swift */; };
+		6988FA471DCDB12A001C7AAA /* JCICRLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6988FA461DCDB12A001C7AAA /* JCICRLoginViewController.swift */; };
 		6988FA4A1DCDB12A001C7AAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6988FA481DCDB12A001C7AAA /* Main.storyboard */; };
 		6988FA4D1DCDB12A001C7AAA /* CoreReturns.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6988FA4B1DCDB12A001C7AAA /* CoreReturns.xcdatamodeld */; };
 		6988FA4F1DCDB12A001C7AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6988FA4E1DCDB12A001C7AAA /* Assets.xcassets */; };
 		6988FA521DCDB12A001C7AAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6988FA501DCDB12A001C7AAA /* LaunchScreen.storyboard */; };
 		6988FA5D1DCDB12A001C7AAA /* CoreReturnsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6988FA5C1DCDB12A001C7AAA /* CoreReturnsTests.swift */; };
 		6988FA681DCDB12A001C7AAA /* CoreReturnsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6988FA671DCDB12A001C7AAA /* CoreReturnsUITests.swift */; };
+		6988FA761DCDBA5D001C7AAA /* JCICRHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6988FA751DCDBA5D001C7AAA /* JCICRHomeViewController.swift */; };
+		6988FA781DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6988FA771DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift */; };
+		69E04F3F1DD0B99800B38FC0 /* JCICRDirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F3E1DD0B99800B38FC0 /* JCICRDirectionsViewController.swift */; };
+		69E04F411DD0BBCC00B38FC0 /* JCICRJobCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F401DD0BBCC00B38FC0 /* JCICRJobCardViewController.swift */; };
+		69E04F451DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F441DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift */; };
+		69E04F471DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F461DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift */; };
+		69E04F491DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F481DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift */; };
+		69E04F4B1DD0CA6700B38FC0 /* JCICRBarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F4A1DD0CA6700B38FC0 /* JCICRBarcodeViewController.swift */; };
+		69E04F4D1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F4C1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift */; };
+		69EF137E1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF137D1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift */; };
+		69F7C0CC1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7C0CB1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift */; };
+		807465EA1DD491F80074B7B7 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465E91DD491F80074B7B7 /* GoogleMapsBase.framework */; settings = {ASSET_TAGS = (); }; };
+		807465EC1DD492280074B7B7 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465EB1DD492280074B7B7 /* GoogleMaps.framework */; settings = {ASSET_TAGS = (); }; };
+		807465EE1DD492370074B7B7 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465ED1DD492370074B7B7 /* GoogleMapsCore.framework */; settings = {ASSET_TAGS = (); }; };
+		807465F01DD492710074B7B7 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 807465EF1DD492710074B7B7 /* GoogleMaps.bundle */; settings = {ASSET_TAGS = (); }; };
+		807465F21DD492980074B7B7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465F11DD492980074B7B7 /* Accelerate.framework */; };
+		807465F41DD492A50074B7B7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465F31DD492A50074B7B7 /* CoreData.framework */; };
+		807465F61DD492AE0074B7B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465F51DD492AE0074B7B7 /* CoreGraphics.framework */; };
+		807465F81DD492B80074B7B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465F71DD492B80074B7B7 /* CoreLocation.framework */; };
+		807465FA1DD492C10074B7B7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465F91DD492C10074B7B7 /* CoreText.framework */; };
+		807465FC1DD492CB0074B7B7 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465FB1DD492CB0074B7B7 /* GLKit.framework */; };
+		807465FE1DD492D80074B7B7 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465FD1DD492D80074B7B7 /* ImageIO.framework */; };
+		807466001DD492E80074B7B7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465FF1DD492E80074B7B7 /* libc++.tbd */; };
+		807466021DD492F30074B7B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 807466011DD492F30074B7B7 /* libz.tbd */; };
+		807466041DD493040074B7B7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807466031DD493040074B7B7 /* OpenGLES.framework */; };
+		807466061DD4930D0074B7B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807466051DD4930D0074B7B7 /* QuartzCore.framework */; };
+		807466081DD4931C0074B7B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807466071DD4931C0074B7B7 /* SystemConfiguration.framework */; };
+		8074660A1DD493270074B7B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807466091DD493270074B7B7 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		691733561DD3355800AED7B2 /* bill.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = bill.pdf; sourceTree = "<group>"; };
 		6988FA411DCDB12A001C7AAA /* CoreReturns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreReturns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6988FA441DCDB12A001C7AAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6988FA461DCDB12A001C7AAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6988FA461DCDB12A001C7AAA /* JCICRLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRLoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6988FA491DCDB12A001C7AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6988FA4C1DCDB12A001C7AAA /* CoreReturns.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreReturns.xcdatamodel; sourceTree = "<group>"; };
 		6988FA4E1DCDB12A001C7AAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +79,34 @@
 		6988FA631DCDB12A001C7AAA /* CoreReturnsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreReturnsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6988FA671DCDB12A001C7AAA /* CoreReturnsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreReturnsUITests.swift; sourceTree = "<group>"; };
 		6988FA691DCDB12A001C7AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6988FA751DCDBA5D001C7AAA /* JCICRHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRHomeViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		6988FA771DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCustomPickUPTableViewCell.swift; sourceTree = "<group>"; };
+		69E04F3E1DD0B99800B38FC0 /* JCICRDirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRDirectionsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		69E04F401DD0BBCC00B38FC0 /* JCICRJobCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRJobCardViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		69E04F441DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCustomJobCardTableViewCell.swift; sourceTree = "<group>"; };
+		69E04F461DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRScanPalletViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		69E04F481DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRDamageReportViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		69E04F4A1DD0CA6700B38FC0 /* JCICRBarcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRBarcodeViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		69E04F4C1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRDigitalSignatureViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		69EF137D1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRDriverInfoViewController.swift; sourceTree = "<group>"; };
+		69F7C0CB1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRBatteryInfoViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		807465E91DD491F80074B7B7 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
+		807465EB1DD492280074B7B7 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		807465ED1DD492370074B7B7 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
+		807465EF1DD492710074B7B7 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		807465F11DD492980074B7B7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		807465F31DD492A50074B7B7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		807465F51DD492AE0074B7B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		807465F71DD492B80074B7B7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		807465F91DD492C10074B7B7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		807465FB1DD492CB0074B7B7 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		807465FD1DD492D80074B7B7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		807465FF1DD492E80074B7B7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		807466011DD492F30074B7B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		807466031DD493040074B7B7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		807466051DD4930D0074B7B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		807466071DD4931C0074B7B7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		807466091DD493270074B7B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +114,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8074660A1DD493270074B7B7 /* UIKit.framework in Frameworks */,
+				807466081DD4931C0074B7B7 /* SystemConfiguration.framework in Frameworks */,
+				807466061DD4930D0074B7B7 /* QuartzCore.framework in Frameworks */,
+				807466041DD493040074B7B7 /* OpenGLES.framework in Frameworks */,
+				807466021DD492F30074B7B7 /* libz.tbd in Frameworks */,
+				807466001DD492E80074B7B7 /* libc++.tbd in Frameworks */,
+				807465FE1DD492D80074B7B7 /* ImageIO.framework in Frameworks */,
+				807465FC1DD492CB0074B7B7 /* GLKit.framework in Frameworks */,
+				807465FA1DD492C10074B7B7 /* CoreText.framework in Frameworks */,
+				807465F81DD492B80074B7B7 /* CoreLocation.framework in Frameworks */,
+				807465F61DD492AE0074B7B7 /* CoreGraphics.framework in Frameworks */,
+				807465F41DD492A50074B7B7 /* CoreData.framework in Frameworks */,
+				807465F21DD492980074B7B7 /* Accelerate.framework in Frameworks */,
+				807465EC1DD492280074B7B7 /* GoogleMaps.framework in Frameworks */,
+				807465EE1DD492370074B7B7 /* GoogleMapsCore.framework in Frameworks */,
+				807465EA1DD491F80074B7B7 /* GoogleMapsBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +153,19 @@
 		6988FA381DCDB12A001C7AAA = {
 			isa = PBXGroup;
 			children = (
+				807466091DD493270074B7B7 /* UIKit.framework */,
+				807466071DD4931C0074B7B7 /* SystemConfiguration.framework */,
+				807466051DD4930D0074B7B7 /* QuartzCore.framework */,
+				807466031DD493040074B7B7 /* OpenGLES.framework */,
+				807466011DD492F30074B7B7 /* libz.tbd */,
+				807465FF1DD492E80074B7B7 /* libc++.tbd */,
+				807465FD1DD492D80074B7B7 /* ImageIO.framework */,
+				807465FB1DD492CB0074B7B7 /* GLKit.framework */,
+				807465F91DD492C10074B7B7 /* CoreText.framework */,
+				807465F71DD492B80074B7B7 /* CoreLocation.framework */,
+				807465F51DD492AE0074B7B7 /* CoreGraphics.framework */,
+				807465F31DD492A50074B7B7 /* CoreData.framework */,
+				807465F11DD492980074B7B7 /* Accelerate.framework */,
 				6988FA431DCDB12A001C7AAA /* CoreReturns */,
 				6988FA5B1DCDB12A001C7AAA /* CoreReturnsTests */,
 				6988FA661DCDB12A001C7AAA /* CoreReturnsUITests */,
@@ -99,9 +186,25 @@
 		6988FA431DCDB12A001C7AAA /* CoreReturns */ = {
 			isa = PBXGroup;
 			children = (
+				807465EF1DD492710074B7B7 /* GoogleMaps.bundle */,
+				807465ED1DD492370074B7B7 /* GoogleMapsCore.framework */,
+				807465EB1DD492280074B7B7 /* GoogleMaps.framework */,
+				807465E91DD491F80074B7B7 /* GoogleMapsBase.framework */,
 				6988FA441DCDB12A001C7AAA /* AppDelegate.swift */,
-				6988FA461DCDB12A001C7AAA /* ViewController.swift */,
+				6988FA461DCDB12A001C7AAA /* JCICRLoginViewController.swift */,
+				6988FA751DCDBA5D001C7AAA /* JCICRHomeViewController.swift */,
+				69F7C0CB1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift */,
+				69E04F3E1DD0B99800B38FC0 /* JCICRDirectionsViewController.swift */,
+				69E04F401DD0BBCC00B38FC0 /* JCICRJobCardViewController.swift */,
+				69E04F461DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift */,
+				69E04F481DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift */,
+				69E04F4A1DD0CA6700B38FC0 /* JCICRBarcodeViewController.swift */,
+				69E04F4C1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift */,
+				69EF137D1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift */,
+				6988FA771DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift */,
+				69E04F441DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift */,
 				6988FA481DCDB12A001C7AAA /* Main.storyboard */,
+				691733561DD3355800AED7B2 /* bill.pdf */,
 				6988FA4E1DCDB12A001C7AAA /* Assets.xcassets */,
 				6988FA501DCDB12A001C7AAA /* LaunchScreen.storyboard */,
 				6988FA531DCDB12A001C7AAA /* Info.plist */,
@@ -196,6 +299,7 @@
 				TargetAttributes = {
 					6988FA401DCDB12A001C7AAA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7AP743B8SS;
 					};
 					6988FA571DCDB12A001C7AAA = {
 						CreatedOnToolsVersion = 7.2;
@@ -235,6 +339,8 @@
 				6988FA521DCDB12A001C7AAA /* LaunchScreen.storyboard in Resources */,
 				6988FA4F1DCDB12A001C7AAA /* Assets.xcassets in Resources */,
 				6988FA4A1DCDB12A001C7AAA /* Main.storyboard in Resources */,
+				691733571DD3355800AED7B2 /* bill.pdf in Resources */,
+				807465F01DD492710074B7B7 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +365,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E04F3F1DD0B99800B38FC0 /* JCICRDirectionsViewController.swift in Sources */,
+				69E04F451DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift in Sources */,
 				6988FA4D1DCDB12A001C7AAA /* CoreReturns.xcdatamodeld in Sources */,
-				6988FA471DCDB12A001C7AAA /* ViewController.swift in Sources */,
+				69E04F4D1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift in Sources */,
+				6988FA781DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift in Sources */,
+				69E04F491DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift in Sources */,
+				69F7C0CC1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift in Sources */,
+				69E04F4B1DD0CA6700B38FC0 /* JCICRBarcodeViewController.swift in Sources */,
+				69E04F411DD0BBCC00B38FC0 /* JCICRJobCardViewController.swift in Sources */,
+				6988FA471DCDB12A001C7AAA /* JCICRLoginViewController.swift in Sources */,
 				6988FA451DCDB12A001C7AAA /* AppDelegate.swift in Sources */,
+				6988FA761DCDBA5D001C7AAA /* JCICRHomeViewController.swift in Sources */,
+				69EF137E1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift in Sources */,
+				69E04F471DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +450,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -355,6 +473,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,6 +497,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -393,6 +513,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -403,9 +524,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CoreReturns",
+				);
 				INFOPLIST_FILE = CoreReturns/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TCS.CoreReturns;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobility.corereturns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -414,9 +547,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CoreReturns",
+				);
 				INFOPLIST_FILE = CoreReturns/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TCS.CoreReturns;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobility.corereturns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -488,6 +633,7 @@
 				6988FA6E1DCDB12A001C7AAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6988FA6F1DCDB12A001C7AAA /* Build configuration list for PBXNativeTarget "CoreReturnsTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +642,7 @@
 				6988FA711DCDB12A001C7AAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6988FA721DCDB12A001C7AAA /* Build configuration list for PBXNativeTarget "CoreReturnsUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +651,7 @@
 				6988FA741DCDB12A001C7AAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
