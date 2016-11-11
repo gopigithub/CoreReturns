@@ -13,7 +13,7 @@ class JCICRJobCardViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet var lblBatteryNo: UILabel!
     @IBOutlet var tblCardTableView: UITableView!
-    let descritpion = ["Scan Pallets", "Record any Overage/Damage/Shortage","View BOL","Capture Signature"]
+    let descritpion = ["Scan Pallets", "Record any Overage/Damage","View BOL","Capture Signature"]
     let image = ["barcode","damageReport","dollar","digitalSign"]
     
     override func viewDidLoad() {
@@ -22,6 +22,7 @@ class JCICRJobCardViewController: UIViewController, UITableViewDelegate, UITable
         self.tblCardTableView.dataSource = self
         self.tblCardTableView.delegate = self
         self.tblCardTableView.bounces = false
+        self.tblCardTableView.tableFooterView = UIView(frame: CGRectZero)
         
         self.setNavigationItemTitle("Job Card")
         self.setDriverInfoButton()

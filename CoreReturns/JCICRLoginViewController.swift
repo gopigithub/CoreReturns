@@ -28,7 +28,21 @@ class JCICRLoginViewController: UIViewController {
 
     
     @IBAction func btnSignInTapped(sender: AnyObject) {
-        self.performSegueWithIdentifier("LoginToHome", sender: self)
+        
+        if(self.txtUsername.text == "" && self.txtPassword.text == "") {
+            let alert = UIAlertController(title: "Alert", message: "Please enter your credentials", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }
+        else if((self.txtUsername.text != "achandgo") || (self.txtPassword.text != "achandgo") ) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter valid credentials", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else {
+            self.performSegueWithIdentifier("LoginToHome", sender: self)
+        }
     }
 
 
@@ -64,7 +78,7 @@ extension UIViewController {
         
         // Instantiate View Controller
         let viewController = storyboard.instantiateViewControllerWithIdentifier("driverInfoViewController") as! JCICRDriverInfoViewController
-       // viewController.view.frame = CGRectMake(0, 50, 50, 50)
+        viewController.view.frame = CGRectMake(0, 50, 100, 100)
         
         // Add View Controller as Child View Controller
         self.addViewControllerAsChildViewController(viewController)

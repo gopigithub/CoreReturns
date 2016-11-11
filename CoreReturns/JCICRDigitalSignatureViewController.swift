@@ -8,13 +8,14 @@
 
 import UIKit
 
-class JCICRDigitalSignatureViewController: UIViewController {
+class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate {
 
     @IBOutlet var digitalSignatureView: UIImageView!
     var mouseSwiped = false
     var mouseMoved = 0
     var point = CGPoint.zero
-    
+    var alert = UIAlertView()
+
     
     @IBOutlet var btnSave: UIButton!
     
@@ -22,7 +23,8 @@ class JCICRDigitalSignatureViewController: UIViewController {
     @IBOutlet var btnCancel: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        alert.delegate = self
+
         self.setNavigationItemTitle("Capture Signature")
         self.setDriverInfoButton()
         mouseMoved = 0
@@ -71,8 +73,14 @@ class JCICRDigitalSignatureViewController: UIViewController {
     
     
     @IBAction func btnSaveTapped(sender: AnyObject) {
+        alert.title = "Sucess"
+        alert.message = "Your Signature is saved"
+        alert.addButtonWithTitle("OK")
+        alert.show()
     }
-    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
+        self.performSegueWithIdentifier("signToHome", sender: self)
+    }
     
     @IBAction func btnCancelTapped(sender: AnyObject) {
         digitalSignatureView.image = nil

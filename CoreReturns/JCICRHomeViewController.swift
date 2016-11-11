@@ -21,6 +21,9 @@ class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tblPickupDelivery.delegate = self
         self.tblPickupDelivery.bounces = false
         self.tblPickupDelivery.separatorStyle = .SingleLine
+        self.tblPickupDelivery?.tableFooterView = UIView(frame: CGRectZero)
+
+        
         
         self.setNavigationBar()
         self.setDriverInfoButton()

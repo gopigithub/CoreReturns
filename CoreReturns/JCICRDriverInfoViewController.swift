@@ -20,6 +20,10 @@ class JCICRDriverInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.6)
+        self.driverInfoView.layer.cornerRadius = 10.0
+        self.driverInfoView.layer.borderWidth = 5.0
+        self.driverInfoView.layer.borderColor = UIColor.blackColor().CGColor
+        self.driverInfoView.layer.masksToBounds = true
     }
 
 

@@ -16,6 +16,7 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     @IBOutlet var btnJobCard: UIButton!
     let sections = ["Battery Information", "Delivery Information"]
     let items = [["ETN", "Voltage", "Capacity","Cold Cranking Amps","Weight","Size"], ["Name", "Residence Address", "Home Number", "Mobile Number", "Email"]]
+    let itemDescription = [["680500100","12V","180Ah","1000A","45kg","513X223X223mm"],["Dr. Irene Mary Walker(Irene)","Residence No.1N, 7301 Country Club Dr, Downmey California - 90241, Uniter States","+1 112867 1324","+1 562 127 2090","irenewalker@gmail.com"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +56,23 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     }
  
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.tblDetailBatteryInfo.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         
-        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        
+        var cell: JCICRCustomBatteryInfoTableViewCell! = tableView.dequeueReusableCellWithIdentifier("customBatteryInfoCell") as? JCICRCustomBatteryInfoTableViewCell
+        if cell == nil {
+            self.tblDetailBatteryInfo.registerNib(UINib(nibName: "JCICRCustomBatteryInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "customBatteryInfoCell")
+            cell = (self.tblDetailBatteryInfo.dequeueReusableCellWithIdentifier("customBatteryInfoCell") as? JCICRCustomBatteryInfoTableViewCell)!
+        }
+//        let cell:UITableViewCell = self.tblDetailBatteryInfo.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        
+//        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
+//        cell.textLabel?.textColor = UIColor.whiteColor()
+//        cell.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
+//        cell.userInteractionEnabled = false
+//        cell.textLabel?.font = UIFont.boldSystemFontOfSize(18)
+        
+        cell.lblInfomation?.text = self.items[indexPath.section][indexPath.row]
+        cell.lblDescription?.text = self.itemDescription[indexPath.section][indexPath.row]
         cell.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
         cell.userInteractionEnabled = false
         

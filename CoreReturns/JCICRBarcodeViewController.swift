@@ -28,6 +28,10 @@ class JCICRBarcodeViewController: UIViewController {
        
         
     }
+    func btnDriverInfoTapped (sender: UIButton) {
+        showDriverInformation()
+        
+    }
     
 
 
