@@ -29,6 +29,15 @@ class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         self.setDriverInfoButton()
 
     }
+    func setLocalNotification() {
+        let localNotification = UILocalNotification()
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        localNotification.alertBody = "new Blog Posted at iOScreator.com"
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+    }
     func setNavigationBar() {
         
         let backButton = UIBarButtonItem(title: "Pickup and Delivery List", style: UIBarButtonItemStyle.Plain, target: navigationController, action: nil)

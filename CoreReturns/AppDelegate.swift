@@ -19,7 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyCbWEueSDNAWt2okDwxBF2jqbMX-9zYcNU")
+        if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:"))) {
+            //UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Alert | .Badge, categories: nil))
+            
+            application.registerUserNotificationSettings(UIUserNotificationSettings (forTypes: UIUserNotificationType.Alert, categories: nil))
+            
+            let localNotification:UILocalNotification = UILocalNotification()
+            localNotification.alertAction = "Testing"
+            localNotification.alertBody = "Hello World!"
+            localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
+            UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        }
         return true
+    }
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        application.applicationIconBadgeNumber = 0
     }
 
     func applicationWillResignActive(application: UIApplication) {
