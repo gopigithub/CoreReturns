@@ -15,10 +15,7 @@ class JCICRBarcodeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
 
-        
         let pdfLoc = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("bill", ofType:"pdf")!) //replace PDF_file with your pdf die name
         let request = NSURLRequest(URL: pdfLoc);
         self.webvwPdf.loadRequest(request);

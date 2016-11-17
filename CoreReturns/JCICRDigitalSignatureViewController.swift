@@ -18,13 +18,24 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
 
     
     @IBOutlet var btnSave: UIButton!
-    
- 
     @IBOutlet var btnCancel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        alert.delegate = self
-
+        self.alert = UIAlertView()
+        self.alert.delegate = self
+        
+        
+        self.btnSave.layer.cornerRadius = 1
+        self.btnSave.layer.borderWidth = 1
+        self.btnSave.layer.masksToBounds = false
+        self.btnSave.layer.borderColor = UIColor.blackColor().CGColor
+        
+        self.btnCancel.layer.cornerRadius = 1
+        self.btnCancel.layer.borderWidth = 1
+        self.btnCancel.layer.masksToBounds = false
+        self.btnCancel.layer.borderColor = UIColor.blackColor().CGColor
+        
         self.setNavigationItemTitle("Capture Signature")
         self.setDriverInfoButton()
         mouseMoved = 0
@@ -73,13 +84,18 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
     
     
     @IBAction func btnSaveTapped(sender: AnyObject) {
-        alert.title = "Sucess"
-        alert.message = "Your Signature is saved"
-        alert.addButtonWithTitle("OK")
-        alert.show()
+        self.alert.title = "Sucess"
+        self.alert.message = "Your Signature is saved"
+        self.alert.addButtonWithTitle("OK")
+        self.alert.show()
     }
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
-        self.performSegueWithIdentifier("signToHome", sender: self)
+       // self.performSegueWithIdentifier("signToHome", sender: self)
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("nextView") as! JCICRHomeViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     @IBAction func btnCancelTapped(sender: AnyObject) {

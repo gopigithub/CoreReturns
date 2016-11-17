@@ -63,14 +63,7 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
             self.tblDetailBatteryInfo.registerNib(UINib(nibName: "JCICRCustomBatteryInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "customBatteryInfoCell")
             cell = (self.tblDetailBatteryInfo.dequeueReusableCellWithIdentifier("customBatteryInfoCell") as? JCICRCustomBatteryInfoTableViewCell)!
         }
-//        let cell:UITableViewCell = self.tblDetailBatteryInfo.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
-        
-//        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
-//        cell.textLabel?.textColor = UIColor.whiteColor()
-//        cell.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
-//        cell.userInteractionEnabled = false
-//        cell.textLabel?.font = UIFont.boldSystemFontOfSize(18)
-        
+
         cell.lblInfomation?.text = self.items[indexPath.section][indexPath.row]
         cell.lblDescription?.text = self.itemDescription[indexPath.section][indexPath.row]
         cell.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)

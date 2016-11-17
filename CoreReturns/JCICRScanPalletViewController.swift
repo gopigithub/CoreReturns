@@ -22,7 +22,8 @@ class JCICRScanPalletViewController: UIViewController, AVCaptureMetadataOutputOb
   
         self.setNavigationItemTitle("Scan Pallets")
         self.setDriverInfoButton()
-        alert.delegate = self
+        self.alert = UIAlertView()
+        self.alert.delegate = self
 
         captureSession = AVCaptureSession()
         
@@ -80,11 +81,12 @@ class JCICRScanPalletViewController: UIViewController, AVCaptureMetadataOutputOb
         captureSession!.startRunning();
     }
     func failed() {
-      
-        let alert = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
 
+        self.alert.title = "Scanning not supported"
+        self.alert.message = "Your device does not support scanning a code from an item. Please use a device with a camera."
+        self.alert.addButtonWithTitle("OK")
+        self.alert.show()
+        
         captureSession = nil
     }
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
@@ -106,10 +108,10 @@ class JCICRScanPalletViewController: UIViewController, AVCaptureMetadataOutputOb
     }
     
     func found(code: String) {
-        alert.title = "Barcode Scanned"
-        alert.message = code
-        alert.addButtonWithTitle("OK")
-        alert.show()
+        self.alert.title = "Barcode Scanned"
+        self.alert.message = code
+        self.alert.addButtonWithTitle("OK")
+        self.alert.show()
 
     }
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){

@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoreReturns/JCICRLoginViewController.swift"
-            timestampString = "500562423.77191"
+            timestampString = "501068391.7741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "btnSignInTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>

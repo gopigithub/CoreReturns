@@ -11,7 +11,7 @@ import UIKit
 class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tblPickupDelivery: UITableView!
-    let items : [String] = ["846902376327102","847562376327102","846902312347103","8567876327104","846902376753152","846902376321538","846902468727112","846902312345098","846902377169202","875631376327100"]
+    let items : [String] = ["846902376327102","847562376327102","846902312347103","85678726327104","846902376753152","846902376321538","846902468727112","846902312345098","846902377169202","875631376327100"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +68,7 @@ class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         else if (((indexPath.row)==7) || ((indexPath.row)==9)) {
             cell.imgDelivery.hidden = true
-            cell.imgPickUp.hidden = true
+            cell.imgPickUp.hidden = false
         }
         else  {
             cell.imgPickUp.hidden = false

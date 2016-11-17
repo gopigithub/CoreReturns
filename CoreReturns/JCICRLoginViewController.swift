@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JCICRLoginViewController: UIViewController {
+class JCICRLoginViewController: UIViewController,UIAlertViewDelegate {
 
     @IBOutlet var txtUsername: UITextField!
     @IBOutlet var txtPassword: UITextField!
@@ -16,11 +16,13 @@ class JCICRLoginViewController: UIViewController {
     @IBOutlet var btnSignIn: UIButton!
     
     let objJCICRDriverInfo = JCICRDriverInfoViewController()
+    var alert = UIAlertView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.alert = UIAlertView()
+        self.alert.delegate = self
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.translucent = false
 
@@ -30,15 +32,16 @@ class JCICRLoginViewController: UIViewController {
     @IBAction func btnSignInTapped(sender: AnyObject) {
         
         if(self.txtUsername.text == "" && self.txtPassword.text == "") {
-            let alert = UIAlertController(title: "Alert", message: "Please enter your credentials", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-            
+            self.alert.title = "Warning"
+            self.alert.message = "Please enter your credentials"
+            self.alert.addButtonWithTitle("OK")
+            self.alert.show()
         }
-        else if((self.txtUsername.text != "achandgo") || (self.txtPassword.text != "achandgo") ) {
-            let alert = UIAlertController(title: "Alert", message: "Please enter valid credentials", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+        else if((self.txtUsername.text != "achandgo") || (self.txtPassword.text != "achandgo")) {
+            self.alert.title = "Warning"
+            self.alert.message = "Please enter valid credentials"
+            self.alert.addButtonWithTitle("OK")
+            self.alert.show()
         }
         else {
             self.performSegueWithIdentifier("LoginToHome", sender: self)
