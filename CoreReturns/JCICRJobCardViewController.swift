@@ -15,6 +15,7 @@ class JCICRJobCardViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet var tblCardTableView: UITableView!
     let descritpion = ["Scan Pallets", "Record any Overage/Damage","View BOL","Capture Signature"]
     let image = ["barcode","damageReport","dollar","digitalSign"]
+    var batteryName : String = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class JCICRJobCardViewController: UIViewController, UITableViewDelegate, UITable
         self.tblCardTableView.delegate = self
         self.tblCardTableView.bounces = false
         self.tblCardTableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        self.lblBatteryNo.text = self.batteryName
         
         self.setNavigationItemTitle("Job Card")
         self.setDriverInfoButton()
@@ -56,13 +59,34 @@ class JCICRJobCardViewController: UIViewController, UITableViewDelegate, UITable
         case 1:
             self.performSegueWithIdentifier("CardToDamageReport", sender: self)
         case 2:
-            self.performSegueWithIdentifier("CardToBarcode", sender: self)
+            self.performSegueWithIdentifier("CardToBOL", sender: self)
         case 3:
             self.performSegueWithIdentifier("CardToDigitalSign", sender: self)
         default:
             break
             
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "CardToScanPallet") {
+            let viewController = segue.destinationViewController as! JCICRScanPalletViewController
+            viewController.batteryName = self.batteryName
+        }
+        
+        if(segue.identifier == "CardToDamageReport") {
+            let viewController = segue.destinationViewController as! JCICRDamageReportViewController
+            viewController.batteryName = self.batteryName
+        }
+        if(segue.identifier == "CardToBOL") {
+            let viewController = segue.destinationViewController as! JCICRViewBolViewController
+            viewController.batteryName = self.batteryName
+        }
+        if(segue.identifier == "CardToDigitalSign") {
+            let viewController = segue.destinationViewController as! JCICRDigitalSignatureViewController
+            viewController.batteryName = self.batteryName
+        }
+        
     }
 
 }

@@ -12,7 +12,7 @@ class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet var tblPickupDelivery: UITableView!
     let items : [String] = ["846902376327102","847562376327102","846902312347103","85678726327104","846902376753152","846902376321538","846902468727112","846902312345098","846902377169202","875631376327100"]
-
+    var tappedItem = String()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +27,12 @@ class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         
         self.setNavigationBar()
         self.setDriverInfoButton()
+        self.setLocalNotification()
 
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.tblPickupDelivery.reloadData()
     }
     func setLocalNotification() {
         let localNotification = UILocalNotification()
@@ -56,7 +61,7 @@ class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         showDriverInformation()
         
     }
-
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -88,10 +93,17 @@ class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.tappedItem = self.items[indexPath.row]
 
         self.performSegueWithIdentifier("showDetailTable", sender: self)
 
-
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "showDetailTable") {
+            let viewController = segue.destinationViewController as! JCICRBatteryInfoViewController
+            viewController.batteryName = self.tappedItem
+        }
     }
 
 }

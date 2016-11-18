@@ -31,13 +31,13 @@ class JCICRLoginViewController: UIViewController,UIAlertViewDelegate {
     
     @IBAction func btnSignInTapped(sender: AnyObject) {
         
-        if(self.txtUsername.text == "" && self.txtPassword.text == "") {
+        if(self.txtUsername.text != "" && self.txtPassword.text != "") {
             self.alert.title = "Warning"
             self.alert.message = "Please enter your credentials"
             self.alert.addButtonWithTitle("OK")
             self.alert.show()
         }
-        else if((self.txtUsername.text != "achandgo") || (self.txtPassword.text != "achandgo")) {
+        else if((self.txtUsername.text == "achandgo") || (self.txtPassword.text == "achandgo")) {
             self.alert.title = "Warning"
             self.alert.message = "Please enter valid credentials"
             self.alert.addButtonWithTitle("OK")

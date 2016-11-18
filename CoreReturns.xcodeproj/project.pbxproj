@@ -23,7 +23,7 @@
 		69E04F451DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F441DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift */; };
 		69E04F471DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F461DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift */; };
 		69E04F491DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F481DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift */; };
-		69E04F4B1DD0CA6700B38FC0 /* JCICRBarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F4A1DD0CA6700B38FC0 /* JCICRBarcodeViewController.swift */; };
+		69E04F4B1DD0CA6700B38FC0 /* JCICRViewBolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F4A1DD0CA6700B38FC0 /* JCICRViewBolViewController.swift */; };
 		69E04F4D1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E04F4C1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift */; };
 		69EF137E1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF137D1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift */; };
 		69F7C0CC1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7C0CB1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift */; };
@@ -87,7 +87,7 @@
 		69E04F441DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCustomJobCardTableViewCell.swift; sourceTree = "<group>"; };
 		69E04F461DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRScanPalletViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		69E04F481DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRDamageReportViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		69E04F4A1DD0CA6700B38FC0 /* JCICRBarcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRBarcodeViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		69E04F4A1DD0CA6700B38FC0 /* JCICRViewBolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRViewBolViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		69E04F4C1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRDigitalSignatureViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		69EF137D1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRDriverInfoViewController.swift; sourceTree = "<group>"; };
 		69F7C0CB1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRBatteryInfoViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -200,7 +200,7 @@
 				69E04F401DD0BBCC00B38FC0 /* JCICRJobCardViewController.swift */,
 				69E04F461DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift */,
 				69E04F481DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift */,
-				69E04F4A1DD0CA6700B38FC0 /* JCICRBarcodeViewController.swift */,
+				69E04F4A1DD0CA6700B38FC0 /* JCICRViewBolViewController.swift */,
 				69E04F4C1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift */,
 				69EF137D1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift */,
 				6988FA771DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift */,
@@ -375,7 +375,7 @@
 				6988FA781DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift in Sources */,
 				69E04F491DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift in Sources */,
 				69F7C0CC1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift in Sources */,
-				69E04F4B1DD0CA6700B38FC0 /* JCICRBarcodeViewController.swift in Sources */,
+				69E04F4B1DD0CA6700B38FC0 /* JCICRViewBolViewController.swift in Sources */,
 				69E04F411DD0BBCC00B38FC0 /* JCICRJobCardViewController.swift in Sources */,
 				6988FA471DCDB12A001C7AAA /* JCICRLoginViewController.swift in Sources */,
 				6988FA451DCDB12A001C7AAA /* AppDelegate.swift in Sources */,

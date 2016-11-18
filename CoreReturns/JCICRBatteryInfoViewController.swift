@@ -14,13 +14,18 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     @IBOutlet var tblDetailBatteryInfo: UITableView!
     @IBOutlet var btnGetDirections: UIButton!
     @IBOutlet var btnJobCard: UIButton!
+    @IBOutlet weak var btnCancel: UIButton!
+    var batteryName:String = String()
+    
+    let objJCICRHomeViewController = JCICRHomeViewController()
+
     let sections = ["Battery Information", "Delivery Information"]
     let items = [["ETN", "Voltage", "Capacity","Cold Cranking Amps","Weight","Size"], ["Name", "Residence Address", "Home Number", "Mobile Number", "Email"]]
-    let itemDescription = [["680500100","12V","180Ah","1000A","45kg","513X223X223mm"],["Dr. Irene Mary Walker(Irene)","Residence No.1N, 7301 Country Club Dr, Downmey California - 90241, Uniter States","+1 112867 1324","+1 562 127 2090","irenewalker@gmail.com"]]
+    let itemDescription = [["680500100","12V","180Ah","1000A","45kg","513X223X223mm"],["Dr. Irene Mary Walker(Irene)","Residence No.1N, 7301 Country Club Dr, Downmey California - 90241, United States","+1 112867 1324","+1 562 127 2090","irenewalker@gmail.com"]]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tblDetailBatteryInfo.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.tblDetailBatteryInfo.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
         self.tblDetailBatteryInfo.bounces = false
@@ -30,8 +35,10 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
        self.setNavigationItemTitle("Battery and Delivery Info")
         self.setDriverInfoButton()
         
+        self.lblBatteryNo.text = self.batteryName
 
     }
+  
     func btnDriverInfoTapped (sender: UIButton) {
         showDriverInformation()
         
@@ -50,6 +57,14 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
         self.performSegueWithIdentifier("DetailToJobCard", sender: self)
         
     }
+    
+    
+    
+    @IBAction func btnCancelTapped(sender: AnyObject) {
+        
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items [section ].count
@@ -100,6 +115,19 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
         
         return sectionName
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "DetailToMap") {
+            let viewController = segue.destinationViewController as! JCICRDirectionsViewController
+            viewController.batteryName = self.batteryName
+        }
+        
+        if(segue.identifier == "DetailToJobCard") {
+            let viewController = segue.destinationViewController as! JCICRJobCardViewController
+            viewController.batteryName = self.batteryName
+        }
+    }
+
 
 }
 

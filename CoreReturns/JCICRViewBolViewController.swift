@@ -1,5 +1,5 @@
 //
-//  JCICRBarcodeViewController.swift
+//  JCICRViewBolViewController.swift
 //  CoreReturns
 //
 //  Created by Mobility on 07/11/16.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class JCICRBarcodeViewController: UIViewController {
+class JCICRViewBolViewController: UIViewController {
     
-
+    @IBOutlet weak var lblBatteryNo: UILabel!
+    var batteryName : String = String()
     @IBOutlet var webvwPdf: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.lblBatteryNo.text = self.batteryName
 
         let pdfLoc = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("bill", ofType:"pdf")!) //replace PDF_file with your pdf die name
         let request = NSURLRequest(URL: pdfLoc);

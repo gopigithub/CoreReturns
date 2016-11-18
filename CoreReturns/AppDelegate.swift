@@ -19,9 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyCbWEueSDNAWt2okDwxBF2jqbMX-9zYcNU")
-        if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:"))) {
-            //UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Alert | .Badge, categories: nil))
-            
+    if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:"))) {
             application.registerUserNotificationSettings(UIUserNotificationSettings (forTypes: UIUserNotificationType.Alert, categories: nil))
             
             let localNotification:UILocalNotification = UILocalNotification()

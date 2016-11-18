@@ -11,11 +11,13 @@ import UIKit
 class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate {
 
     @IBOutlet var digitalSignatureView: UIImageView!
+    var batteryName : String = String()
     var mouseSwiped = false
     var mouseMoved = 0
     var point = CGPoint.zero
     var alert = UIAlertView()
 
+    @IBOutlet weak var lblBatteryNo: UILabel!
     
     @IBOutlet var btnSave: UIButton!
     @IBOutlet var btnCancel: UIButton!
@@ -35,6 +37,7 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
         self.btnCancel.layer.borderWidth = 1
         self.btnCancel.layer.masksToBounds = false
         self.btnCancel.layer.borderColor = UIColor.blackColor().CGColor
+        self.lblBatteryNo.text = self.batteryName
         
         self.setNavigationItemTitle("Capture Signature")
         self.setDriverInfoButton()
@@ -90,7 +93,7 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
         self.alert.show()
     }
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
-       // self.performSegueWithIdentifier("signToHome", sender: self)
+
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         

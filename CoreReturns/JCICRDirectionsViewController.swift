@@ -12,9 +12,12 @@ import GoogleMaps
 class JCICRDirectionsViewController: UIViewController {
 
     @IBOutlet weak var mapView: UIView!
+    @IBOutlet weak var lblBatteryNo: UILabel!
+    var batteryName:String = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.lblBatteryNo?.text = self.batteryName
         self.setNavigationItemTitle("Direction")
         self.setDriverInfoButton()
     }

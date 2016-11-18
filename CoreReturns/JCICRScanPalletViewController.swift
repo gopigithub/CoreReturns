@@ -15,7 +15,10 @@ class JCICRScanPalletViewController: UIViewController, AVCaptureMetadataOutputOb
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     var alert = UIAlertView()
+    
+    var batteryName : String = String()
 
+    @IBOutlet weak var lblBatteryNo: UILabel!
     @IBOutlet var scanPreviewLayer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,7 @@ class JCICRScanPalletViewController: UIViewController, AVCaptureMetadataOutputOb
         self.setDriverInfoButton()
         self.alert = UIAlertView()
         self.alert.delegate = self
-
+        self.lblBatteryNo.text = self.batteryName
         captureSession = AVCaptureSession()
         
         let videoCaptureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)

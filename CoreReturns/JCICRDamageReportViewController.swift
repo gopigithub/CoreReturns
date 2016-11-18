@@ -9,12 +9,16 @@
 import UIKit
 
 class JCICRDamageReportViewController: UIViewController {
+    
+    var batteryName : String = String()
 
+    @IBOutlet weak var lblBatteryNo: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setNavigationItemTitle("Damage Report")
         self.setDriverInfoButton()
+        self.lblBatteryNo.text = self.batteryName
     }
 
     override func didReceiveMemoryWarning() {
