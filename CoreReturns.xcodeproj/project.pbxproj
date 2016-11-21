@@ -45,6 +45,8 @@
 		807466061DD4930D0074B7B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807466051DD4930D0074B7B7 /* QuartzCore.framework */; };
 		807466081DD4931C0074B7B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807466071DD4931C0074B7B7 /* SystemConfiguration.framework */; };
 		8074660A1DD493270074B7B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807466091DD493270074B7B7 /* UIKit.framework */; };
+		80D86E801DE3025E00F9CD93 /* JCICRCoreReturnsAvailableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D86E7F1DE3025E00F9CD93 /* JCICRCoreReturnsAvailableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		80EC0DE61DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EC0DE51DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +91,7 @@
 		69E04F481DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRDamageReportViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		69E04F4A1DD0CA6700B38FC0 /* JCICRViewBolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRViewBolViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		69E04F4C1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRDigitalSignatureViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		69EF137D1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRDriverInfoViewController.swift; sourceTree = "<group>"; };
+		69EF137D1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRDriverInfoViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		69F7C0CB1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRBatteryInfoViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		801E99BC1DD5D66E00EE58A6 /* JCICRCustomBatteryInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCustomBatteryInfoTableViewCell.swift; sourceTree = "<group>"; };
 		807465E91DD491F80074B7B7 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
@@ -109,6 +111,8 @@
 		807466051DD4930D0074B7B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		807466071DD4931C0074B7B7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		807466091DD493270074B7B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		80D86E7F1DE3025E00F9CD93 /* JCICRCoreReturnsAvailableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = JCICRCoreReturnsAvailableViewController.swift; path = ../JCICRCoreReturnsAvailableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		80EC0DE51DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCoreReturnsInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,8 @@
 				69E04F4A1DD0CA6700B38FC0 /* JCICRViewBolViewController.swift */,
 				69E04F4C1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift */,
 				69EF137D1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift */,
+				80D86E7F1DE3025E00F9CD93 /* JCICRCoreReturnsAvailableViewController.swift */,
+				80EC0DE51DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift */,
 				6988FA771DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift */,
 				69E04F441DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift */,
 				801E99BC1DD5D66E00EE58A6 /* JCICRCustomBatteryInfoTableViewCell.swift */,
@@ -371,6 +377,7 @@
 				69E04F3F1DD0B99800B38FC0 /* JCICRDirectionsViewController.swift in Sources */,
 				69E04F451DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift in Sources */,
 				6988FA4D1DCDB12A001C7AAA /* CoreReturns.xcdatamodeld in Sources */,
+				80EC0DE61DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift in Sources */,
 				69E04F4D1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift in Sources */,
 				6988FA781DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift in Sources */,
 				69E04F491DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift in Sources */,
@@ -383,6 +390,7 @@
 				69EF137E1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift in Sources */,
 				801E99BD1DD5D66E00EE58A6 /* JCICRCustomBatteryInfoTableViewCell.swift in Sources */,
 				69E04F471DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift in Sources */,
+				80D86E801DE3025E00F9CD93 /* JCICRCoreReturnsAvailableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

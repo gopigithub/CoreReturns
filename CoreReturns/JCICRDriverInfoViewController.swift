@@ -28,7 +28,7 @@ class JCICRDriverInfoViewController: UIViewController {
 
 
     @IBAction func closeBtnTapped(sender: AnyObject) {
-        self.removeDriverInformation()
+        self.removeSuperViewInformation()
     }
 
 }

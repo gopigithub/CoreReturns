@@ -18,7 +18,6 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
     var alert = UIAlertView()
 
     @IBOutlet weak var lblBatteryNo: UILabel!
-    
     @IBOutlet var btnSave: UIButton!
     @IBOutlet var btnCancel: UIButton!
     
@@ -87,10 +86,8 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
     
     
     @IBAction func btnSaveTapped(sender: AnyObject) {
-        self.alert.title = "Sucess"
-        self.alert.message = "Your Signature is saved"
-        self.alert.addButtonWithTitle("OK")
-        self.alert.show()
+
+        self.showCoreAlertView()
     }
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
 
@@ -104,4 +101,5 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
     @IBAction func btnCancelTapped(sender: AnyObject) {
         digitalSignatureView.image = nil
     }
+    
 }

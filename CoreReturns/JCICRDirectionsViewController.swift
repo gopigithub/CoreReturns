@@ -59,6 +59,7 @@ class JCICRDirectionsViewController: UIViewController {
         polyline.spans = [GMSStyleSpan(color: UIColor.blackColor())]
         polyline.map = mapView
     }
+    
     func btnDriverInfoTapped (sender: UIButton) {
         showDriverInformation()
         

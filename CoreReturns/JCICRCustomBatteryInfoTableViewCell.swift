@@ -12,11 +12,12 @@ class JCICRCustomBatteryInfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblInfomation: UILabel!
     
+    @IBOutlet weak var txtDescription: UITextField!
     
-    @IBOutlet weak var lblDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
         // Initialization code
     }
 

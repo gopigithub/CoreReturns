@@ -10,7 +10,6 @@ import UIKit
 
 class JCICRJobCardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
     @IBOutlet var lblBatteryNo: UILabel!
     @IBOutlet var tblCardTableView: UITableView!
     let descritpion = ["Scan Pallets", "Record any Overage/Damage","View BOL","Capture Signature"]
@@ -36,10 +35,13 @@ class JCICRJobCardViewController: UIViewController, UITableViewDelegate, UITable
         showDriverInformation()
         
     }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         var cell: JCICRCustomJobCardTableViewCell! = tableView.dequeueReusableCellWithIdentifier("customJobCardCell") as? JCICRCustomJobCardTableViewCell
         if cell == nil {
             self.tblCardTableView.registerNib(UINib(nibName: "JCICRCustomJobCardTableViewCell", bundle: nil), forCellReuseIdentifier: "customJobCardCell")
@@ -51,7 +53,9 @@ class JCICRJobCardViewController: UIViewController, UITableViewDelegate, UITable
         cell.selectionStyle = .None
         return cell
     }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         switch(indexPath.row)
         {
         case 0:
@@ -69,11 +73,11 @@ class JCICRJobCardViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if(segue.identifier == "CardToScanPallet") {
             let viewController = segue.destinationViewController as! JCICRScanPalletViewController
             viewController.batteryName = self.batteryName
         }
-        
         if(segue.identifier == "CardToDamageReport") {
             let viewController = segue.destinationViewController as! JCICRDamageReportViewController
             viewController.batteryName = self.batteryName

@@ -15,13 +15,25 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     @IBOutlet var btnGetDirections: UIButton!
     @IBOutlet var btnJobCard: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
+    @IBOutlet weak var btnEdit: UIButton!
+    @IBOutlet weak var btnSave: UIButton!
     var batteryName:String = String()
+
     
     let objJCICRHomeViewController = JCICRHomeViewController()
 
-    let sections = ["Battery Information", "Delivery Information"]
-    let items = [["ETN", "Voltage", "Capacity","Cold Cranking Amps","Weight","Size"], ["Name", "Residence Address", "Home Number", "Mobile Number", "Email"]]
-    let itemDescription = [["680500100","12V","180Ah","1000A","45kg","513X223X223mm"],["Dr. Irene Mary Walker(Irene)","Residence No.1N, 7301 Country Club Dr, Downmey California - 90241, United States","+1 112867 1324","+1 562 127 2090","irenewalker@gmail.com"]]
+    let sections = [ "Delivery Information","General Information","Battery Information"]
+    
+    let items = [
+        ["Name","Address","Mobile","Email"],
+        ["Pickup Date", "Delivery Date", "Quantity"],
+        ["ETN", "Voltage", "Capacity","Weight"]]
+    
+    
+    let itemDescription = [
+         ["Dr. Irene Mary Walker(Irene)","Residence No.1N, 7301 Country Club Dr, Downmey California - 90241, United States","+1 562 127 2090","irenewalker@gmail.com"],
+         ["11/19/2016","11/19/2016","4 OPTIMA® AGM batteries 2 LTH® batteries 2"],
+        ["680500100 OPTIMA® AGM batteries","12V","180Ah","45kg"]]
     
     
     override func viewDidLoad() {
@@ -59,6 +71,15 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     }
     
     
+    @IBAction func btnEditTapped(sender: AnyObject) {
+        
+    }
+    
+    
+    
+    @IBAction func btnSaveTapped(sender: AnyObject) {
+    }
+    
     
     @IBAction func btnCancelTapped(sender: AnyObject) {
         
@@ -80,7 +101,7 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
         }
 
         cell.lblInfomation?.text = self.items[indexPath.section][indexPath.row]
-        cell.lblDescription?.text = self.itemDescription[indexPath.section][indexPath.row]
+        cell.txtDescription?.text = self.itemDescription[indexPath.section][indexPath.row]
         cell.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
         cell.userInteractionEnabled = false
         
@@ -105,10 +126,12 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
         var sectionName: String
         switch section {
         case 0:
-            sectionName = "Battery Information"
-        case 1:
             sectionName = "Delivery Information"
-            // ...
+        case 1:
+            sectionName = "General Information"
+        case 2:
+            sectionName = "Battery Information"
+         
         default:
             sectionName = ""
         }

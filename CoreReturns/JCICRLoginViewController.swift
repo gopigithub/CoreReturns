@@ -89,6 +89,15 @@ extension UIViewController {
         currentWindow!.addSubview(viewController.view)
         
     }
+    func showCoreAlertView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("coreAlertViewController") as! JCICRCoreReturnsAvailableViewController
+        viewController.view.frame = CGRectMake(0, 50, 100, 100)
+        
+        self.addViewControllerAsChildViewController(viewController)
+        let currentWindow = UIApplication.sharedApplication().keyWindow
+        currentWindow?.addSubview(viewController.view)
+    }
     
     private func addViewControllerAsChildViewController(viewController: UIViewController) {
         // Add Child View Controller
@@ -105,8 +114,9 @@ extension UIViewController {
         viewController.didMoveToParentViewController(self)
     }
     
-    func removeDriverInformation() {
+    func removeSuperViewInformation() {
         self.view.removeFromSuperview()
     }
+    
 }
 
