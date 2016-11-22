@@ -18,6 +18,8 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     @IBOutlet weak var btnEdit: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     var batteryName:String = String()
+     var delegate : RemoveTableDataSourceDelegate?
+    var selectedIndexPath = Int()
 
     
     let objJCICRHomeViewController = JCICRHomeViewController()
@@ -38,17 +40,50 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.tblDetailBatteryInfo.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.tblDetailBatteryInfo.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
         self.tblDetailBatteryInfo.bounces = false
         self.tblDetailBatteryInfo?.tableFooterView = UIView(frame: CGRectZero)
         
 
-       self.setNavigationItemTitle("Battery and Delivery Info")
+        self.setNavigationItemTitle("Battery and Delivery Info")
         self.setDriverInfoButton()
+        self.setButtonProperties()
+        
+
         
         self.lblBatteryNo.text = self.batteryName
 
+    }
+    
+    func setButtonProperties() {
+        
+        self.btnGetDirections.layer.cornerRadius = 5
+        self.btnGetDirections.layer.borderWidth = 1
+        self.btnGetDirections.layer.masksToBounds = false
+        self.btnGetDirections.layer.borderColor = UIColor.blackColor().CGColor
+        
+        self.btnJobCard.layer.cornerRadius = 5
+        self.btnJobCard.layer.borderWidth = 1
+        self.btnJobCard.layer.masksToBounds = false
+        self.btnJobCard.layer.borderColor = UIColor.blackColor().CGColor
+        
+        self.btnCancel.layer.cornerRadius = 5
+        self.btnCancel.layer.borderWidth = 1
+        self.btnCancel.layer.masksToBounds = false
+        self.btnCancel.layer.borderColor = UIColor.blackColor().CGColor
+        
+        self.btnEdit.layer.cornerRadius = 5
+        self.btnEdit.layer.borderWidth = 1
+        self.btnEdit.layer.masksToBounds = false
+        self.btnEdit.layer.borderColor = UIColor.blackColor().CGColor
+        
+        self.btnSave.layer.cornerRadius = 5
+        self.btnSave.layer.borderWidth = 1
+        self.btnSave.layer.masksToBounds = false
+        self.btnSave.layer.borderColor = UIColor.blackColor().CGColor
+        
     }
   
     func btnDriverInfoTapped (sender: UIButton) {
@@ -65,17 +100,12 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
 
     @IBAction func JobCardBtnTapped(sender: AnyObject) {
         
-        
         self.performSegueWithIdentifier("DetailToJobCard", sender: self)
-        
     }
-    
     
     @IBAction func btnEditTapped(sender: AnyObject) {
         
     }
-    
-    
     
     @IBAction func btnSaveTapped(sender: AnyObject) {
     }
@@ -83,6 +113,7 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     
     @IBAction func btnCancelTapped(sender: AnyObject) {
         
+        delegate?.removeData(self.selectedIndexPath)
         self.navigationController?.popViewControllerAnimated(true)
     }
     

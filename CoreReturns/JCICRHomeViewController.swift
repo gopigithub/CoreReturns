@@ -8,11 +8,20 @@
 
 import UIKit
 
-class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol RemoveTableDataSourceDelegate {
+    func removeData(indexpath: Int)
+}
+
+class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,RemoveTableDataSourceDelegate {
     
     @IBOutlet var tblPickupDelivery: UITableView!
-    let items : [String] = ["846902376327102","847562376327102","846902312347103","85678726327104","846902376753152","846902376321538","846902468727112","846902312345098","846902377169202","875631376327100"]
+    var items : [String] = ["846902376327102","847562376327102","846902312347103","85678726327104","846902376753152","846902376321538","846902468727112","846902312345098","846902377169202","875631376327100"]
     var tappedItem = String()
+    var selectedIndex = Int()
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -95,15 +104,24 @@ class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         self.tappedItem = self.items[indexPath.row]
+        self.selectedIndex = indexPath.row
 
-        self.performSegueWithIdentifier("showDetailTable", sender: self)
+        self.performSegueWithIdentifier("showDetailTable", sender: self.selectedIndex)
 
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "showDetailTable") {
             let viewController = segue.destinationViewController as! JCICRBatteryInfoViewController
             viewController.batteryName = self.tappedItem
+            viewController.delegate = self
+            viewController.selectedIndexPath = self.selectedIndex
         }
+    }
+    func removeData(indexpath:Int) {
+         print("tableview row deleted")
+        self.items.removeAtIndex(self.selectedIndex)
+        self.tblPickupDelivery.reloadData()
     }
 
 }
+

@@ -47,15 +47,20 @@ class JCICRLoginViewController: UIViewController,UIAlertViewDelegate {
             self.performSegueWithIdentifier("LoginToHome", sender: self)
         }
     }
-
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
+        self.txtUsername.text = ""
+        self.txtPassword.text = ""
+        
+        
+    }
 
     @IBAction func switchRememberTapped(sender: AnyObject) {
     }
 }
 
 extension UIViewController {
+  
 
-    
     func setNavigationItemTitle(navigationTitle : String) {
         let view = UIView()
         self.navigationItem.titleView = view

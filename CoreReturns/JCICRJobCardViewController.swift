@@ -12,7 +12,7 @@ class JCICRJobCardViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet var lblBatteryNo: UILabel!
     @IBOutlet var tblCardTableView: UITableView!
-    let descritpion = ["Scan Pallets", "Record any Overage/Damage","View BOL","Capture Signature"]
+    let descritpion = ["Scan Pallets", "Record any Overage/Damage/Shortage","View BOL","Capture Proof of Delivery "]
     let image = ["barcode","damageReport","dollar","digitalSign"]
     var batteryName : String = String()
     

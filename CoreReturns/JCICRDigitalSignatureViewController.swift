@@ -16,7 +16,11 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
     var mouseMoved = 0
     var point = CGPoint.zero
     var alert = UIAlertView()
-
+    
+    var isFromCoreReturns = false
+    var delegate : RemoveTableDataSourceDelegate?
+    var selectedIndexPath = Int()
+    
     @IBOutlet weak var lblBatteryNo: UILabel!
     @IBOutlet var btnSave: UIButton!
     @IBOutlet var btnCancel: UIButton!
@@ -27,18 +31,25 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
         self.alert.delegate = self
         
         
-        self.btnSave.layer.cornerRadius = 1
+        self.btnSave.layer.cornerRadius = 5
         self.btnSave.layer.borderWidth = 1
         self.btnSave.layer.masksToBounds = false
         self.btnSave.layer.borderColor = UIColor.blackColor().CGColor
         
-        self.btnCancel.layer.cornerRadius = 1
+        self.btnCancel.layer.cornerRadius = 5
         self.btnCancel.layer.borderWidth = 1
         self.btnCancel.layer.masksToBounds = false
         self.btnCancel.layer.borderColor = UIColor.blackColor().CGColor
         self.lblBatteryNo.text = self.batteryName
         
-        self.setNavigationItemTitle("Capture Signature")
+        if (isFromCoreReturns) {
+            self.setNavigationItemTitle("Capture Proof of Pickup")
+        }
+        else {
+            self.setNavigationItemTitle("Capture Proof of Delivery")
+        }
+        
+        
         self.setDriverInfoButton()
         mouseMoved = 0
     }
@@ -86,20 +97,38 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
     
     
     @IBAction func btnSaveTapped(sender: AnyObject) {
+        
+        if (digitalSignatureView.image == nil) {
+            self.alert.title = "Warning"
+            self.alert.message = "Please provide your signature"
+            self.alert.addButtonWithTitle("OK")
+            self.alert.show()
+        }
+        else {
+            if(isFromCoreReturns) {
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                
+                let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("nextView") as! JCICRHomeViewController
+                delegate?.removeData(selectedIndexPath)
+                self.navigationController?.pushViewController(nextViewController, animated: true)
+            }
+            else {
+                self.showCoreAlertView()
+            }
+            
+        }
 
-        self.showCoreAlertView()
     }
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
 
         
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("nextView") as! JCICRHomeViewController
-        self.navigationController?.pushViewController(nextViewController, animated: true)
+
     }
     
     @IBAction func btnCancelTapped(sender: AnyObject) {
         digitalSignatureView.image = nil
     }
+    
+    
     
 }
