@@ -8,7 +8,8 @@
 
 import UIKit
 
-class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
+
+class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet var lblBatteryNo: UILabel!
     @IBOutlet var tblDetailBatteryInfo: UITableView!
@@ -18,43 +19,107 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     @IBOutlet weak var btnEdit: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     var batteryName:String = String()
-     var delegate : RemoveTableDataSourceDelegate?
+    var delegate : RemoveTableDataSourceDelegate?
     var selectedIndexPath = Int()
+    var isEditBtnTapped = false
 
     
     let objJCICRHomeViewController = JCICRHomeViewController()
 
-    let sections = [ "Delivery Information","General Information","Battery Information"]
+    var sections = [ "Delivery Information","General Information","Battery Information"]
     
-    let items = [
-        ["Name","Address","Mobile","Email"],
-        ["Pickup Date", "Delivery Date", "Quantity"],
-        ["ETN", "Voltage", "Capacity","Weight"]]
-    
-    
-    let itemDescription = [
-         ["Dr. Irene Mary Walker(Irene)","Residence No.1N, 7301 Country Club Dr, Downmey California - 90241, United States","+1 562 127 2090","irenewalker@gmail.com"],
-         ["11/19/2016","11/19/2016","4 OPTIMA® AGM batteries 2 LTH® batteries 2"],
-        ["680500100 OPTIMA® AGM batteries","12V","180Ah","45kg"]]
+    var deliveryInfoItems : [JCICRBatteryInfoModel] = []
+    var generalInfoItems : [JCICRBatteryInfoModel] = []
+    var batteryInfoItems : [JCICRBatteryInfoModel] = []
+    var dataSource : [[JCICRBatteryInfoModel]] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setDataSource()
+        self.isEditBtnTapped = false
+        self.setNavigationItemTitle("Battery and Delivery Info")
+        self.setDriverInfoButton()
+        self.setButtonProperties()
         
         self.tblDetailBatteryInfo.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.tblDetailBatteryInfo.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
         self.tblDetailBatteryInfo.bounces = false
         self.tblDetailBatteryInfo?.tableFooterView = UIView(frame: CGRectZero)
         
-
-        self.setNavigationItemTitle("Battery and Delivery Info")
-        self.setDriverInfoButton()
-        self.setButtonProperties()
-        
-
-        
         self.lblBatteryNo.text = self.batteryName
 
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    func setDataSource() {
+        
+         let objJCICRBatteryInfoModel1 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel1.leftDataSource = "Name"
+        objJCICRBatteryInfoModel1.rightDataSource = "Dr. Irene Mary Walker(Irene)"
+        
+        
+         let objJCICRBatteryInfoModel2 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel2.leftDataSource = "Address"
+        objJCICRBatteryInfoModel2.rightDataSource = "Residence No.1N, 7301 Country Club Dr, Downmey California - 90241, United States"
+        
+        
+         let objJCICRBatteryInfoModel3 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel3.leftDataSource = "Mobile"
+        objJCICRBatteryInfoModel3.rightDataSource = "+1 562 127 2090"
+        
+        
+         let objJCICRBatteryInfoModel4 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel4.leftDataSource = "Email"
+        objJCICRBatteryInfoModel4.rightDataSource = "irenewalker@gmail.com"
+        
+        let objJCICRBatteryInfoModel5 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel5.leftDataSource = "Pickup Date"
+        objJCICRBatteryInfoModel5.rightDataSource = "11/19/2016"
+        
+        let objJCICRBatteryInfoModel6 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel6.leftDataSource = "Delivery Date"
+        objJCICRBatteryInfoModel6.rightDataSource = "11/19/2016"
+        
+        let objJCICRBatteryInfoModel7 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel7.leftDataSource = "Quantity"
+        objJCICRBatteryInfoModel7.rightDataSource = "4 OPTIMA® AGM batteries 2 LTH® batteries 2"
+        
+        let objJCICRBatteryInfoModel8 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel8.leftDataSource = "ETN"
+        objJCICRBatteryInfoModel8.rightDataSource = "680500100 OPTIMA® AGM batteries"
+        
+        let objJCICRBatteryInfoModel9 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel9.leftDataSource = "Voltage"
+        objJCICRBatteryInfoModel9.rightDataSource = "12V"
+        
+        let objJCICRBatteryInfoModel10 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel10.leftDataSource = "Capacity"
+        objJCICRBatteryInfoModel10.rightDataSource = "180Ah"
+        
+        let objJCICRBatteryInfoModel11 = JCICRBatteryInfoModel()
+        objJCICRBatteryInfoModel11.leftDataSource = "Weight"
+        objJCICRBatteryInfoModel11.rightDataSource = "45kg"
+        
+        
+        self.deliveryInfoItems.append(objJCICRBatteryInfoModel1)
+        self.deliveryInfoItems.append(objJCICRBatteryInfoModel2)
+        self.deliveryInfoItems.append(objJCICRBatteryInfoModel3)
+        self.deliveryInfoItems.append(objJCICRBatteryInfoModel4)
+        self.generalInfoItems.append(objJCICRBatteryInfoModel5)
+        self.generalInfoItems.append(objJCICRBatteryInfoModel6)
+        self.generalInfoItems.append(objJCICRBatteryInfoModel7)
+        self.batteryInfoItems.append(objJCICRBatteryInfoModel8)
+        self.batteryInfoItems.append(objJCICRBatteryInfoModel9)
+        self.batteryInfoItems.append(objJCICRBatteryInfoModel10)
+        self.batteryInfoItems.append(objJCICRBatteryInfoModel11)
+        
+        
+        self.dataSource.append(self.deliveryInfoItems)
+        self.dataSource.append(self.generalInfoItems)
+        self.dataSource.append(self.batteryInfoItems)
+   
     }
     
     func setButtonProperties() {
@@ -97,7 +162,6 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     }
     
 
-
     @IBAction func JobCardBtnTapped(sender: AnyObject) {
         
         self.performSegueWithIdentifier("DetailToJobCard", sender: self)
@@ -105,9 +169,30 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     
     @IBAction func btnEditTapped(sender: AnyObject) {
         
+        self.isEditBtnTapped = true
+        self.tblDetailBatteryInfo.reloadData()
+        
     }
     
     @IBAction func btnSaveTapped(sender: AnyObject) {
+        
+        self.isEditBtnTapped = false
+        for(var sectionnum=0;sectionnum<self.dataSource.count;sectionnum++) {
+            for(var rownum=0;rownum<self.dataSource[sectionnum].count;rownum++) {
+                let indexPath = NSIndexPath(forRow: rownum, inSection: sectionnum)
+
+                let cell = ((tblDetailBatteryInfo as UITableView).cellForRowAtIndexPath(indexPath)! as! JCICRCustomBatteryInfoTableViewCell)
+                print(cell.txtDescription.text)
+                
+                let objJCICRBatteryInfoModel : JCICRBatteryInfoModel = self.dataSource[indexPath.section][indexPath.row]
+                
+                objJCICRBatteryInfoModel.rightDataSource = cell.txtDescription.text
+                self.dataSource[sectionnum][rownum] = objJCICRBatteryInfoModel
+            }
+        }
+        self.tblDetailBatteryInfo.reloadData()
+
+        
     }
     
     
@@ -119,7 +204,9 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items [section ].count
+        
+        
+        return self.dataSource[section].count
     }
  
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -129,12 +216,29 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
         if cell == nil {
             self.tblDetailBatteryInfo.registerNib(UINib(nibName: "JCICRCustomBatteryInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "customBatteryInfoCell")
             cell = (self.tblDetailBatteryInfo.dequeueReusableCellWithIdentifier("customBatteryInfoCell") as? JCICRCustomBatteryInfoTableViewCell)!
+            
+  
         }
-
-        cell.lblInfomation?.text = self.items[indexPath.section][indexPath.row]
-        cell.txtDescription?.text = self.itemDescription[indexPath.section][indexPath.row]
         cell.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
-        cell.userInteractionEnabled = false
+        if(isEditBtnTapped) {
+            cell.txtDescription.layer.borderWidth = 1
+            cell.txtDescription.layer.cornerRadius = 5
+            cell.txtDescription.backgroundColor = UIColor.whiteColor()
+            cell.txtDescription.textColor = UIColor.blackColor()
+            cell.userInteractionEnabled = true
+        }
+        else {
+            cell.txtDescription.layer.borderWidth = 0
+            cell.txtDescription.layer.cornerRadius = 0
+            cell.txtDescription.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
+            cell.txtDescription.textColor = UIColor.whiteColor()
+            cell.userInteractionEnabled = false
+            
+        }
+        let objJCICRBatteryInfoModel : JCICRBatteryInfoModel = self.dataSource[indexPath.section][indexPath.row]
+        
+        cell.lblInfomation.text = objJCICRBatteryInfoModel.leftDataSource
+        cell.txtDescription.text = objJCICRBatteryInfoModel.rightDataSource
         
         return cell
     }
@@ -154,20 +258,8 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
         return myLbl
     }
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var sectionName: String
-        switch section {
-        case 0:
-            sectionName = "Delivery Information"
-        case 1:
-            sectionName = "General Information"
-        case 2:
-            sectionName = "Battery Information"
-         
-        default:
-            sectionName = ""
-        }
-        
-        return sectionName
+
+        return self.sections [section ]
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -181,7 +273,6 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
             viewController.batteryName = self.batteryName
         }
     }
-
-
+  
 }
 

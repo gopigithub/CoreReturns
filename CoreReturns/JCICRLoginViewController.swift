@@ -31,13 +31,13 @@ class JCICRLoginViewController: UIViewController,UIAlertViewDelegate {
     
     @IBAction func btnSignInTapped(sender: AnyObject) {
         
-        if(self.txtUsername.text == "" && self.txtPassword.text == "") {
+        if(self.txtUsername.text != "" && self.txtPassword.text != "") {
             self.alert.title = "Warning"
             self.alert.message = "Please enter your credentials"
             self.alert.addButtonWithTitle("OK")
             self.alert.show()
         }
-        else if((self.txtUsername.text != "achandgo") || (self.txtPassword.text != "achandgo")) {
+        else if((self.txtUsername.text == "achandgo") || (self.txtPassword.text == "achandgo")) {
             self.alert.title = "Warning"
             self.alert.message = "Please enter valid credentials"
             self.alert.addButtonWithTitle("OK")
@@ -102,6 +102,19 @@ extension UIViewController {
         self.addViewControllerAsChildViewController(viewController)
         let currentWindow = UIApplication.sharedApplication().keyWindow
         currentWindow?.addSubview(viewController.view)
+    }
+    
+    func showCorePickupAlertView() {
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("corePickupAlertViewController") as! JCICRCoreReturnsPickUpInfoViewController
+       // viewController.view.frame = CGRectMake(20, 150, 100, 100)
+        
+        self.addViewControllerAsChildViewController(viewController)
+        let currentWindow = UIApplication.sharedApplication().keyWindow
+        currentWindow?.addSubview(viewController.view)
+        
     }
     
     private func addViewControllerAsChildViewController(viewController: UIViewController) {

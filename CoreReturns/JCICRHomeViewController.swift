@@ -19,9 +19,6 @@ class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     var tappedItem = String()
     var selectedIndex = Int()
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -118,7 +115,6 @@ class JCICRHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     func removeData(indexpath:Int) {
-         print("tableview row deleted")
         self.items.removeAtIndex(self.selectedIndex)
         self.tblPickupDelivery.reloadData()
     }
