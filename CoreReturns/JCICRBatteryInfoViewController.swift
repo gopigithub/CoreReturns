@@ -126,27 +126,22 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
         
         self.btnGetDirections.layer.cornerRadius = 5
         self.btnGetDirections.layer.borderWidth = 1
-        self.btnGetDirections.layer.masksToBounds = false
         self.btnGetDirections.layer.borderColor = UIColor.blackColor().CGColor
         
         self.btnJobCard.layer.cornerRadius = 5
         self.btnJobCard.layer.borderWidth = 1
-        self.btnJobCard.layer.masksToBounds = false
         self.btnJobCard.layer.borderColor = UIColor.blackColor().CGColor
         
         self.btnCancel.layer.cornerRadius = 5
         self.btnCancel.layer.borderWidth = 1
-        self.btnCancel.layer.masksToBounds = false
         self.btnCancel.layer.borderColor = UIColor.blackColor().CGColor
         
         self.btnEdit.layer.cornerRadius = 5
         self.btnEdit.layer.borderWidth = 1
-        self.btnEdit.layer.masksToBounds = false
         self.btnEdit.layer.borderColor = UIColor.blackColor().CGColor
         
         self.btnSave.layer.cornerRadius = 5
         self.btnSave.layer.borderWidth = 1
-        self.btnSave.layer.masksToBounds = false
         self.btnSave.layer.borderColor = UIColor.blackColor().CGColor
         
     }
@@ -182,7 +177,6 @@ class JCICRBatteryInfoViewController: UIViewController, UITableViewDataSource,UI
                 let indexPath = NSIndexPath(forRow: rownum, inSection: sectionnum)
 
                 let cell = ((tblDetailBatteryInfo as UITableView).cellForRowAtIndexPath(indexPath)! as! JCICRCustomBatteryInfoTableViewCell)
-                print(cell.txtDescription.text)
                 
                 let objJCICRBatteryInfoModel : JCICRBatteryInfoModel = self.dataSource[indexPath.section][indexPath.row]
                 

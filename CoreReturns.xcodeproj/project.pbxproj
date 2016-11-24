@@ -49,6 +49,8 @@
 		8074660A1DD493270074B7B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807466091DD493270074B7B7 /* UIKit.framework */; };
 		809D2DC01DE5C624007A81A9 /* JCICRCoreReturnsPickUpInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809D2DBF1DE5C624007A81A9 /* JCICRCoreReturnsPickUpInfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		809D2DC21DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809D2DC11DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift */; settings = {ASSET_TAGS = (); }; };
+		80AB64A91DE6F2C700F810F5 /* JCICRCoreReturnsPickUpPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB64A81DE6F2C700F810F5 /* JCICRCoreReturnsPickUpPopOverViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		80AB64AB1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB64AA1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift */; settings = {ASSET_TAGS = (); }; };
 		80C882451DE47C3700486426 /* JCICRCoreReturnsAvailableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C882441DE47C3700486426 /* JCICRCoreReturnsAvailableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		80EC0DE61DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EC0DE51DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -119,6 +121,8 @@
 		807466091DD493270074B7B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		809D2DBF1DE5C624007A81A9 /* JCICRCoreReturnsPickUpInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCoreReturnsPickUpInfoViewController.swift; sourceTree = "<group>"; };
 		809D2DC11DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCorePickUpInfoModel.swift; sourceTree = "<group>"; };
+		80AB64A81DE6F2C700F810F5 /* JCICRCoreReturnsPickUpPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCoreReturnsPickUpPopOverViewController.swift; sourceTree = "<group>"; };
+		80AB64AA1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCorePickUpPopOverModel.swift; sourceTree = "<group>"; };
 		80C882441DE47C3700486426 /* JCICRCoreReturnsAvailableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCoreReturnsAvailableViewController.swift; sourceTree = "<group>"; };
 		80EC0DE51DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCoreReturnsInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +211,7 @@
 				6988FA441DCDB12A001C7AAA /* AppDelegate.swift */,
 				80148D531DE5602F0060AFBE /* JCICRBatteryInfoModel.swift */,
 				809D2DC11DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift */,
+				80AB64AA1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift */,
 				6988FA461DCDB12A001C7AAA /* JCICRLoginViewController.swift */,
 				6988FA751DCDBA5D001C7AAA /* JCICRHomeViewController.swift */,
 				69F7C0CB1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift */,
@@ -220,6 +225,7 @@
 				80C882441DE47C3700486426 /* JCICRCoreReturnsAvailableViewController.swift */,
 				80EC0DE51DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift */,
 				809D2DBF1DE5C624007A81A9 /* JCICRCoreReturnsPickUpInfoViewController.swift */,
+				80AB64A81DE6F2C700F810F5 /* JCICRCoreReturnsPickUpPopOverViewController.swift */,
 				6988FA771DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift */,
 				69E04F441DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift */,
 				801E99BC1DD5D66E00EE58A6 /* JCICRCustomBatteryInfoTableViewCell.swift */,
@@ -390,6 +396,7 @@
 				69E04F451DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift in Sources */,
 				6988FA4D1DCDB12A001C7AAA /* CoreReturns.xcdatamodeld in Sources */,
 				809D2DC01DE5C624007A81A9 /* JCICRCoreReturnsPickUpInfoViewController.swift in Sources */,
+				80AB64AB1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift in Sources */,
 				80EC0DE61DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift in Sources */,
 				69E04F4D1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift in Sources */,
 				6988FA781DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift in Sources */,
@@ -401,6 +408,7 @@
 				69E04F411DD0BBCC00B38FC0 /* JCICRJobCardViewController.swift in Sources */,
 				809D2DC21DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift in Sources */,
 				6988FA471DCDB12A001C7AAA /* JCICRLoginViewController.swift in Sources */,
+				80AB64A91DE6F2C700F810F5 /* JCICRCoreReturnsPickUpPopOverViewController.swift in Sources */,
 				6988FA451DCDB12A001C7AAA /* AppDelegate.swift in Sources */,
 				6988FA761DCDBA5D001C7AAA /* JCICRHomeViewController.swift in Sources */,
 				80C882451DE47C3700486426 /* JCICRCoreReturnsAvailableViewController.swift in Sources */,

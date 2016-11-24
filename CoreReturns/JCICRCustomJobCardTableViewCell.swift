@@ -23,7 +23,6 @@ class JCICRCustomJobCardTableViewCell: UITableViewCell {
         cardView.layer.borderWidth = 1
         cardView.layer.borderColor = UIColor.whiteColor().CGColor
         cardView.layer.cornerRadius = 1
-        cardView.layer.masksToBounds = true
     }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

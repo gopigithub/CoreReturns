@@ -104,12 +104,10 @@ extension UIViewController {
         currentWindow?.addSubview(viewController.view)
     }
     
-    func showCorePickupAlertView() {
+    func showCorePickupAlertView(viewController:UIViewController) {
         
         
-        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("corePickupAlertViewController") as! JCICRCoreReturnsPickUpInfoViewController
-       // viewController.view.frame = CGRectMake(20, 150, 100, 100)
+               // viewController.view.frame = CGRectMake(20, 150, 100, 100)
         
         self.addViewControllerAsChildViewController(viewController)
         let currentWindow = UIApplication.sharedApplication().keyWindow

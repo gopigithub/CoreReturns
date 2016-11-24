@@ -32,17 +32,14 @@ class JCICRCoreReturnsPickUpInfoViewController: UIViewController,AVCaptureMetada
         self.coreReturnsPickupAlertView.layer.cornerRadius = 10.0
         self.coreReturnsPickupAlertView.layer.borderWidth = 5.0
         self.coreReturnsPickupAlertView.layer.borderColor = UIColor.blackColor().CGColor
-        self.coreReturnsPickupAlertView.layer.masksToBounds = true
         
         self.topSeparatorView.layer.cornerRadius = 10.0
         self.topSeparatorView.layer.borderWidth = 5.0
         self.topSeparatorView.layer.borderColor = UIColor.blackColor().CGColor
-        self.topSeparatorView.layer.masksToBounds = true
         
         self.bottomSeparatorView.layer.cornerRadius = 10.0
         self.bottomSeparatorView.layer.borderColor = UIColor.blackColor().CGColor
         self.bottomSeparatorView.layer.borderWidth = 5.0
-        self.bottomSeparatorView.layer.masksToBounds = true
         
         
         captureSession = AVCaptureSession()
@@ -144,6 +141,7 @@ class JCICRCoreReturnsPickUpInfoViewController: UIViewController,AVCaptureMetada
         if (captureSession?.running == false) {
             captureSession!.startRunning();
         }
+        delegate?.AddNewBattery()
     }
     
     

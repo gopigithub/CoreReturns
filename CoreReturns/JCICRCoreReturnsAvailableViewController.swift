@@ -24,16 +24,13 @@ class JCICRCoreReturnsAvailableViewController: UIViewController {
         self.coreReturnsAlertView.layer.cornerRadius = 10.0
         self.coreReturnsAlertView.layer.borderWidth = 5.0
         self.coreReturnsAlertView.layer.borderColor = UIColor.blackColor().CGColor
-        self.coreReturnsAlertView.layer.masksToBounds = true
         
         self.btnYes.layer.cornerRadius = 5
         self.btnYes.layer.borderWidth = 1
-        self.btnYes.layer.masksToBounds = false
         self.btnYes.layer.borderColor = UIColor.blackColor().CGColor
         
         self.btnNo.layer.cornerRadius = 5
         self.btnNo.layer.borderWidth = 1
-        self.btnNo.layer.masksToBounds = false
         self.btnNo.layer.borderColor = UIColor.blackColor().CGColor
     }
 

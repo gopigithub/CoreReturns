@@ -33,12 +33,10 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
         
         self.btnSave.layer.cornerRadius = 5
         self.btnSave.layer.borderWidth = 1
-        self.btnSave.layer.masksToBounds = false
         self.btnSave.layer.borderColor = UIColor.blackColor().CGColor
         
         self.btnCancel.layer.cornerRadius = 5
         self.btnCancel.layer.borderWidth = 1
-        self.btnCancel.layer.masksToBounds = false
         self.btnCancel.layer.borderColor = UIColor.blackColor().CGColor
         self.lblBatteryNo.text = self.batteryName
         

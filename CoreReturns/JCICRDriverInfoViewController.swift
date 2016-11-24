@@ -23,7 +23,6 @@ class JCICRDriverInfoViewController: UIViewController {
         self.driverInfoView.layer.cornerRadius = 10.0
         self.driverInfoView.layer.borderWidth = 5.0
         self.driverInfoView.layer.borderColor = UIColor.blackColor().CGColor
-        self.driverInfoView.layer.masksToBounds = true
     }
 
 

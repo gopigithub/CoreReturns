@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoreReturns/JCICRDigitalSignatureViewController.swift"
-            timestampString = "501518931.705073"
+            timestampString = "501691875.52901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "btnSaveTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoreReturns/JCICRBatteryInfoViewController.swift"
-            timestampString = "501597811.310574"
+            timestampString = "501691875.52901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "btnSaveTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -73,13 +73,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CoreReturns/JCICRCoreReturnsInformationViewController.swift"
-            timestampString = "501604810.457872"
+            filePath = "CoreReturns/JCICRCoreReturnsPickUpPopOverViewController.swift"
+            timestampString = "501690929.298179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "prepareForSegue(_:sender:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,14 +89,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CoreReturns/JCICRCoreReturnsPickUpInfoViewController.swift"
-            timestampString = "501604844.4739"
+            filePath = "CoreReturns/JCICRCoreReturnsInformationViewController.swift"
+            timestampString = "501692410.321279"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "ManualEntryBtnTapped(_:)"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "popOverValueClicked(_:selectedIndex:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoreReturns.JCICRCoreReturnsInformationViewController.popOverValueClicked (CoreReturns.JCICRCoreReturnsInformationViewController)(Swift.String) -&gt; ()"
+                  moduleName = "CoreReturns"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mobility/Downloads/CoreReturns/CoreReturns/JCICRCoreReturnsInformationViewController.swift"
+                  timestampString = "501691042.02624"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "266"
+                  endingLineNumber = "266"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "protocol witness for CoreReturns.AddNewBatteryDeleagate.popOverValueClicked &lt;A where A: CoreReturns.AddNewBatteryDeleagate&gt; (A)(Swift.String) -&gt; () in conformance CoreReturns.JCICRCoreReturnsInformationViewController : CoreReturns.AddNewBatteryDeleagate in CoreReturns"
+                  moduleName = "CoreReturns"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mobility/Downloads/CoreReturns/CoreReturns/JCICRCoreReturnsInformationViewController.swift"
+                  timestampString = "501691042.026507"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "265"
+                  endingLineNumber = "265"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

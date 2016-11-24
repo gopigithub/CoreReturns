@@ -7,8 +7,17 @@
 //
 
 import UIKit
+enum textFieldKeyBoardType : Int {
+    case editable = 0
+    case nonEditable = 1
+    case popOver = 2
+}
 
 class JCICRCorePickUpInfoModel: NSObject {
+    
+    var sections : String!
+    
+    var keyBoardType : textFieldKeyBoardType!
     
     var leftDataSource : String!
     var rightDataSource : String!
