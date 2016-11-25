@@ -42,9 +42,11 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
         
         if (isFromCoreReturns) {
             self.setNavigationItemTitle("Capture Proof of Pickup")
+            self.btnSave.setTitle("Save & Next", forState: .Normal)
         }
         else {
             self.setNavigationItemTitle("Capture Proof of Delivery")
+            self.btnSave.setTitle("Save", forState: .Normal)
         }
         
         
@@ -106,8 +108,8 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
             if(isFromCoreReturns) {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
-                let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("nextView") as! JCICRHomeViewController
-                delegate?.removeData(selectedIndexPath)
+                let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("customerInfoView") as! JCICRCoreReturnsCustomerInfoViewController
+                //delegate?.removeData(selectedIndexPath)
                 self.navigationController?.pushViewController(nextViewController, animated: true)
             }
             else {

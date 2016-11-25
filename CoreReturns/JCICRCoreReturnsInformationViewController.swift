@@ -40,6 +40,13 @@ class JCICRCoreReturnsInformationViewController: UIViewController,UITableViewDat
         self.lblBatteryNo.text = self.batteryName
         
         self.tblBatteryInfo.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        self.tblBatteryInfo.registerNib("JCICRCustomCorePickupSectionHeaderTableViewCell", forHeaderFooterViewReuseIdentifier: "customSectionHeader")
+//        self.tblBatteryInfo.registerClass(JCICRCustomCorePickupSectionHeaderTableViewCell(), forCellReuseIdentifier: "customSectionHeader")
+        
+        
+        
+        let nib = UINib(nibName: "JCICRCustomCorePickupSectionHeaderTableViewCell", bundle: nil)
+        self.tblBatteryInfo.registerNib(nib, forHeaderFooterViewReuseIdentifier: "customSectionHeader")
         self.tblBatteryInfo.dataSource = self
         self.tblBatteryInfo.delegate = self
         self.tblBatteryInfo.bounces = false
@@ -54,46 +61,87 @@ class JCICRCoreReturnsInformationViewController: UIViewController,UITableViewDat
     
     func setDataSource() {
         
-        let objSectionName = JCICRCorePickUpInfoModel()
-        objSectionName.sections = "CustomerInformation"
+//        let objSectionName = JCICRCorePickUpInfoModel()
+//        objSectionName.sections = "CustomerInformation"
+//        
+//        let objJCICRCorePickUpInfoModel = JCICRCorePickUpInfoModel()
+//        objJCICRCorePickUpInfoModel.leftDataSource = "ID"
+//        objJCICRCorePickUpInfoModel.rightDataSource = "6327102"
+//        objJCICRCorePickUpInfoModel.keyBoardType = textFieldKeyBoardType.editable
+//        
+//        let objJCICRCorePickUpInfoModel1 = JCICRCorePickUpInfoModel()
+//        objJCICRCorePickUpInfoModel1.leftDataSource = "Name"
+//        objJCICRCorePickUpInfoModel1.rightDataSource = "Dr. Irene Mary Walker(Irene)"
+//        objJCICRCorePickUpInfoModel1.keyBoardType = textFieldKeyBoardType.editable
+//
+//        
+//        let objJCICRCorePickUpInfoModel2 = JCICRCorePickUpInfoModel()
+//        objJCICRCorePickUpInfoModel2.leftDataSource = "Address"
+//        objJCICRCorePickUpInfoModel2.rightDataSource = "Residence No.1N, 7301 Country Club Dr, Downmey California - 90241, United States"
+//        objJCICRCorePickUpInfoModel2.keyBoardType = textFieldKeyBoardType.editable
+//
+//        
+//        let objJCICRCorePickUpInfoModel3 = JCICRCorePickUpInfoModel()
+//        objJCICRCorePickUpInfoModel3.leftDataSource = "Mobile"
+//        objJCICRCorePickUpInfoModel3.rightDataSource = "+1 562 127 2090"
+//        objJCICRCorePickUpInfoModel3.keyBoardType = textFieldKeyBoardType.editable
+//
+//        
+//        let objJCICRCorePickUpInfoModel4 = JCICRCorePickUpInfoModel()
+//        objJCICRCorePickUpInfoModel4.leftDataSource = "Email"
+//        objJCICRCorePickUpInfoModel4.rightDataSource = "irenewalker@gmail.com"
+//        objJCICRCorePickUpInfoModel4.keyBoardType = textFieldKeyBoardType.editable
+//
+//        
+//        self.sectionInfoItems.append(objSectionName)
+//        
+//        self.customerInfoItems.append(objJCICRCorePickUpInfoModel)
+//        self.customerInfoItems.append(objJCICRCorePickUpInfoModel1)
+//        self.customerInfoItems.append(objJCICRCorePickUpInfoModel2)
+//        self.customerInfoItems.append(objJCICRCorePickUpInfoModel3)
+//        self.customerInfoItems.append(objJCICRCorePickUpInfoModel4)
+//        self.dataSource.append(self.customerInfoItems)
         
-        let objJCICRCorePickUpInfoModel = JCICRCorePickUpInfoModel()
-        objJCICRCorePickUpInfoModel.leftDataSource = "ID"
-        objJCICRCorePickUpInfoModel.rightDataSource = "6327102"
-        objJCICRCorePickUpInfoModel.keyBoardType = textFieldKeyBoardType.editable
         
         let objJCICRCorePickUpInfoModel1 = JCICRCorePickUpInfoModel()
-        objJCICRCorePickUpInfoModel1.leftDataSource = "Name"
-        objJCICRCorePickUpInfoModel1.rightDataSource = "Dr. Irene Mary Walker(Irene)"
-        objJCICRCorePickUpInfoModel1.keyBoardType = textFieldKeyBoardType.editable
-
+        objJCICRCorePickUpInfoModel1.sections = "Battery Information"
+        
+   
         
         let objJCICRCorePickUpInfoModel2 = JCICRCorePickUpInfoModel()
-        objJCICRCorePickUpInfoModel2.leftDataSource = "Address"
-        objJCICRCorePickUpInfoModel2.rightDataSource = "Residence No.1N, 7301 Country Club Dr, Downmey California - 90241, United States"
-        objJCICRCorePickUpInfoModel2.keyBoardType = textFieldKeyBoardType.editable
-
+        objJCICRCorePickUpInfoModel2.leftDataSource = "ETN"
+        objJCICRCorePickUpInfoModel2.rightDataSource = "OPTIMA"
+        objJCICRCorePickUpInfoModel2.keyBoardType = textFieldKeyBoardType.popOver
+        
         
         let objJCICRCorePickUpInfoModel3 = JCICRCorePickUpInfoModel()
-        objJCICRCorePickUpInfoModel3.leftDataSource = "Mobile"
-        objJCICRCorePickUpInfoModel3.rightDataSource = "+1 562 127 2090"
+        objJCICRCorePickUpInfoModel3.leftDataSource = "SKU Number"
+        objJCICRCorePickUpInfoModel3.rightDataSource = "680500100 OPTIMA® AGM batteries"
         objJCICRCorePickUpInfoModel3.keyBoardType = textFieldKeyBoardType.editable
-
+        
         
         let objJCICRCorePickUpInfoModel4 = JCICRCorePickUpInfoModel()
-        objJCICRCorePickUpInfoModel4.leftDataSource = "Email"
-        objJCICRCorePickUpInfoModel4.rightDataSource = "irenewalker@gmail.com"
+        objJCICRCorePickUpInfoModel4.leftDataSource = "Quantity"
+        objJCICRCorePickUpInfoModel4.rightDataSource = "2"
         objJCICRCorePickUpInfoModel4.keyBoardType = textFieldKeyBoardType.editable
-
         
-        self.sectionInfoItems.append(objSectionName)
         
-        self.customerInfoItems.append(objJCICRCorePickUpInfoModel)
-        self.customerInfoItems.append(objJCICRCorePickUpInfoModel1)
+        let objJCICRCorePickUpInfoModel5 = JCICRCorePickUpInfoModel()
+        objJCICRCorePickUpInfoModel5.leftDataSource = "Conditon"
+        objJCICRCorePickUpInfoModel5.rightDataSource = "Working"
+        objJCICRCorePickUpInfoModel5.keyBoardType = textFieldKeyBoardType.popOver
+        
+        
+        self.sectionInfoItems.append(objJCICRCorePickUpInfoModel1)
+        
         self.customerInfoItems.append(objJCICRCorePickUpInfoModel2)
         self.customerInfoItems.append(objJCICRCorePickUpInfoModel3)
         self.customerInfoItems.append(objJCICRCorePickUpInfoModel4)
+        self.customerInfoItems.append(objJCICRCorePickUpInfoModel5)
+        
         self.dataSource.append(self.customerInfoItems)
+        
+        self.tblBatteryInfo.reloadData()
         
     }
     func btnDriverInfoTapped (sender: UIButton) {
@@ -119,18 +167,54 @@ class JCICRCoreReturnsInformationViewController: UIViewController,UITableViewDat
         switch textField.tag{
             
         case 2:
-            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("PopoverViewController") as! JCICRCoreReturnsPickUpPopOverViewController
+//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//
+//                let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let vc = storyboard.instantiateViewControllerWithIdentifier("PopoverViewController") as! JCICRCoreReturnsPickUpPopOverViewController
+//                vc.delegate = self
+//                vc.modalPresentationStyle = UIModalPresentationStyle.Popover
+//                vc.popoverPresentationController?.sourceView = textField
+//                vc.popoverPresentationController?.sourceRect = CGRectMake(CGRectGetMidX(textField.bounds), CGRectGetMidY(textField.bounds),0,0)
+//                dispatch_async(dispatch_get_main_queue(), ^{
+// 
+//                    
+//                    let popover: UIPopoverPresentationController = vc.popoverPresentationController!
+//                    
+//                    popover.sourceView = textField
+//                    popover.sourceRect = CGRectMake(CGRectGetMidX(textField.bounds), CGRectGetMidY(textField.bounds),0,0)
+//                    popover.permittedArrowDirections = UIPopoverArrowDirection.Any
+//                    let height = vc.dataSource.count * Int(vc.tblPopOver.rowHeight)
+//                    vc.preferredContentSize = CGSize(width: 300, height: height)
+//                    presentViewController(vc, animated: true, completion:nil)
+//                    });
+//                });
+            
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+          dispatch_async(dispatch_get_main_queue(), {
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("PopoverViewController") as! JCICRCoreReturnsPickUpPopOverViewController
             vc.delegate = self
             vc.modalPresentationStyle = UIModalPresentationStyle.Popover
             vc.popoverPresentationController?.sourceView = textField
-            vc.popoverPresentationController?.sourceRect = textField.bounds
-            let popover: UIPopoverPresentationController = vc.popoverPresentationController!
+            vc.popoverPresentationController?.sourceRect = CGRectMake(CGRectGetMidX(textField.bounds), CGRectGetMidY(textField.bounds),0,0)
+//            let rowHeight = vc.tblPopOver.rowHeight
+//            let height = vc.dataSource.count * Int(rowHeight)
+//            vc.preferredContentSize = CGSize(width: 300, height: height)
+        
+        
+                    
+                    let popover: UIPopoverPresentationController = vc.popoverPresentationController!
+                        popover.sourceView = textField
+                        popover.sourceRect = CGRectMake(CGRectGetMidX(textField.bounds), CGRectGetMidY(textField.bounds),0,0)
+                        popover.permittedArrowDirections = UIPopoverArrowDirection.Any
 
-            popover.sourceView = textField
-            popover.sourceRect = textField.bounds
-            popover.permittedArrowDirections = UIPopoverArrowDirection.Any
-            presentViewController(vc, animated: true, completion:nil)
+                        self.presentViewController(vc, animated: true, completion:nil)
+                    
+                })
+                
+                })
+     
             
         default:
             break
@@ -191,69 +275,81 @@ class JCICRCoreReturnsInformationViewController: UIViewController,UITableViewDat
         return cell
     }
  
-//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let myLbl = UILabel()
-//        myLbl.frame = CGRectMake(20, 10, 100, 50)
-//        myLbl.backgroundColor = UIColor(red: 32/255.0, green: 161/255.0, blue: 149/255.0, alpha: 1.0)
-//        let title = self.tableView(tableView, titleForHeaderInSection: section)!
-//        myLbl.text = title
-//        myLbl.textColor = UIColor.whiteColor()
-//        myLbl.textAlignment = .Center
-//        return myLbl
-//    }
-//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        
-//        
-//        
-//     return self.sectionInfoItems [section ]
-//    }
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let myView = UIView()
+        myView.frame = CGRectMake(50, 10, 100, 100)
+        myView.backgroundColor = UIColor(red: 32/255.0, green: 161/255.0, blue: 149/255.0, alpha: 1.0)
+        let myLbl = UILabel()
+        myLbl.frame = CGRectMake(20, 10, 100, 50)
+        myLbl.backgroundColor = UIColor.redColor()
+        let title = self.tableView(tableView, titleForHeaderInSection: section)!
+        myLbl.text = title
+        myLbl.textColor = UIColor.whiteColor()
+        myLbl.textAlignment = .Center
+        myView.addSubview(myLbl)
+        return myView
+     
+    }
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+   
+            
+            return "BATTERY INFORMATION 1"
+            
+    
+        
+        
+//     return self.sectionInfoItemsindexPath[section]
+    }
     
     func AddNewBattery() {
         self.isAddBatteryTapped = true
         
-        let objSectionName = JCICRCorePickUpInfoModel()
-        objSectionName.sections = "Battery Information"
         
-        let objJCICRCorePickUpInfoModel5 = JCICRCorePickUpInfoModel()
-        objJCICRCorePickUpInfoModel5.leftDataSource = "CRN No"
-        objJCICRCorePickUpInfoModel5.rightDataSource = "985468680500100"
-        objJCICRCorePickUpInfoModel5.keyBoardType = textFieldKeyBoardType.nonEditable
+        let objSectionName1 = JCICRCorePickUpInfoModel()
+        objSectionName1.sections = "Battery Information"
         
         let objJCICRCorePickUpInfoModel6 = JCICRCorePickUpInfoModel()
-        objJCICRCorePickUpInfoModel6.leftDataSource = "ETN"
-        objJCICRCorePickUpInfoModel6.rightDataSource = "OPTIMA"
-        objJCICRCorePickUpInfoModel6.keyBoardType = textFieldKeyBoardType.popOver
-
+        objJCICRCorePickUpInfoModel6.leftDataSource = "CRN No"
+        objJCICRCorePickUpInfoModel6.rightDataSource = "985468680500100"
+        objJCICRCorePickUpInfoModel6.keyBoardType = textFieldKeyBoardType.nonEditable
         
         let objJCICRCorePickUpInfoModel7 = JCICRCorePickUpInfoModel()
-        objJCICRCorePickUpInfoModel7.leftDataSource = "SKU Number"
-        objJCICRCorePickUpInfoModel7.rightDataSource = "680500100 OPTIMA® AGM batteries"
-        objJCICRCorePickUpInfoModel7.keyBoardType = textFieldKeyBoardType.editable
+        objJCICRCorePickUpInfoModel7.leftDataSource = "ETN"
+        objJCICRCorePickUpInfoModel7.rightDataSource = "OPTIMA"
+        objJCICRCorePickUpInfoModel7.keyBoardType = textFieldKeyBoardType.popOver
 
         
         let objJCICRCorePickUpInfoModel8 = JCICRCorePickUpInfoModel()
-        objJCICRCorePickUpInfoModel8.leftDataSource = "Quantity"
-        objJCICRCorePickUpInfoModel8.rightDataSource = "2"
+        objJCICRCorePickUpInfoModel8.leftDataSource = "SKU Number"
+        objJCICRCorePickUpInfoModel8.rightDataSource = "680500100 OPTIMA® AGM batteries"
         objJCICRCorePickUpInfoModel8.keyBoardType = textFieldKeyBoardType.editable
 
         
         let objJCICRCorePickUpInfoModel9 = JCICRCorePickUpInfoModel()
-        objJCICRCorePickUpInfoModel9.leftDataSource = "Conditon"
-        objJCICRCorePickUpInfoModel9.rightDataSource = "Working"
-        objJCICRCorePickUpInfoModel9.keyBoardType = textFieldKeyBoardType.popOver
+        objJCICRCorePickUpInfoModel9.leftDataSource = "Quantity"
+        objJCICRCorePickUpInfoModel9.rightDataSource = "2"
+        objJCICRCorePickUpInfoModel9.keyBoardType = textFieldKeyBoardType.editable
 
         
-        self.sectionInfoItems.append(objSectionName)
+        let objJCICRCorePickUpInfoModel10 = JCICRCorePickUpInfoModel()
+        objJCICRCorePickUpInfoModel10.leftDataSource = "Conditon"
+        objJCICRCorePickUpInfoModel10.rightDataSource = "Working"
+        objJCICRCorePickUpInfoModel10.keyBoardType = textFieldKeyBoardType.popOver
+
         
-        self.batteryInfoItems.append(objJCICRCorePickUpInfoModel5)
+        self.sectionInfoItems.append(objSectionName1)
+        
         self.batteryInfoItems.append(objJCICRCorePickUpInfoModel6)
         self.batteryInfoItems.append(objJCICRCorePickUpInfoModel7)
         self.batteryInfoItems.append(objJCICRCorePickUpInfoModel8)
         self.batteryInfoItems.append(objJCICRCorePickUpInfoModel9)
+        self.batteryInfoItems.append(objJCICRCorePickUpInfoModel10)
+
         
         self.dataSource.append(self.batteryInfoItems)
         
         self.tblBatteryInfo.reloadData()
+        
     }
     
     func popOverValueClicked(tappedValue:String,selectedIndex:Int) {

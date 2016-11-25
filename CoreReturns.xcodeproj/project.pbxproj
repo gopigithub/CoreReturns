@@ -51,6 +51,7 @@
 		809D2DC21DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809D2DC11DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift */; settings = {ASSET_TAGS = (); }; };
 		80AB64A91DE6F2C700F810F5 /* JCICRCoreReturnsPickUpPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB64A81DE6F2C700F810F5 /* JCICRCoreReturnsPickUpPopOverViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		80AB64AB1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB64AA1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift */; settings = {ASSET_TAGS = (); }; };
+		80BF099D1DE8764500EA2AAC /* JCICRCoreReturnsCustomerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF099C1DE8764500EA2AAC /* JCICRCoreReturnsCustomerInfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		80C882451DE47C3700486426 /* JCICRCoreReturnsAvailableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C882441DE47C3700486426 /* JCICRCoreReturnsAvailableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		80EC0DE61DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EC0DE51DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -123,6 +124,7 @@
 		809D2DC11DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCorePickUpInfoModel.swift; sourceTree = "<group>"; };
 		80AB64A81DE6F2C700F810F5 /* JCICRCoreReturnsPickUpPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCoreReturnsPickUpPopOverViewController.swift; sourceTree = "<group>"; };
 		80AB64AA1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCorePickUpPopOverModel.swift; sourceTree = "<group>"; };
+		80BF099C1DE8764500EA2AAC /* JCICRCoreReturnsCustomerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCoreReturnsCustomerInfoViewController.swift; sourceTree = "<group>"; };
 		80C882441DE47C3700486426 /* JCICRCoreReturnsAvailableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCoreReturnsAvailableViewController.swift; sourceTree = "<group>"; };
 		80EC0DE51DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCoreReturnsInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +228,7 @@
 				80EC0DE51DE31F7A00E756A6 /* JCICRCoreReturnsInformationViewController.swift */,
 				809D2DBF1DE5C624007A81A9 /* JCICRCoreReturnsPickUpInfoViewController.swift */,
 				80AB64A81DE6F2C700F810F5 /* JCICRCoreReturnsPickUpPopOverViewController.swift */,
+				80BF099C1DE8764500EA2AAC /* JCICRCoreReturnsCustomerInfoViewController.swift */,
 				6988FA771DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift */,
 				69E04F441DD0C0F000B38FC0 /* JCICRCustomJobCardTableViewCell.swift */,
 				801E99BC1DD5D66E00EE58A6 /* JCICRCustomBatteryInfoTableViewCell.swift */,
@@ -415,6 +418,7 @@
 				69EF137E1DD1B55F00BA2CB5 /* JCICRDriverInfoViewController.swift in Sources */,
 				801E99BD1DD5D66E00EE58A6 /* JCICRCustomBatteryInfoTableViewCell.swift in Sources */,
 				69E04F471DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift in Sources */,
+				80BF099D1DE8764500EA2AAC /* JCICRCoreReturnsCustomerInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
