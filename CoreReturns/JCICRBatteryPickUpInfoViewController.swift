@@ -1,15 +1,15 @@
 //
-//  JCICRCoreReturnsPickUpInfoViewController.swift
+//  JCICRBatteryPickUpInfoViewController.swift
 //  CoreReturns
 //
-//  Created by Vaibhav on 23/11/16.
+//  Created by Mobility on 23/11/16.
 //  Copyright © 2016 Mobility. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class JCICRCoreReturnsPickUpInfoViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate,UIAlertViewDelegate {
+class JCICRBatteryPickUpInfoViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate,UIAlertViewDelegate {
     
     @IBOutlet weak var coreReturnsPickupAlertView: UIView!
     @IBOutlet weak var cameraView: UIView!
@@ -142,6 +142,7 @@ class JCICRCoreReturnsPickUpInfoViewController: UIViewController,AVCaptureMetada
             captureSession!.startRunning();
         }
         delegate?.AddNewBattery()
+        self.removeSuperViewInformation()
     }
     
     

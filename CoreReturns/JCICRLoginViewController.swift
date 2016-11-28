@@ -96,7 +96,7 @@ extension UIViewController {
     }
     func showCoreAlertView() {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("coreAlertViewController") as! JCICRCoreReturnsAvailableViewController
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("coreAlertViewController") as! JCICRAvailableAlertViewController
         viewController.view.frame = CGRectMake(0, 50, 100, 100)
         
         self.addViewControllerAsChildViewController(viewController)
@@ -105,9 +105,6 @@ extension UIViewController {
     }
     
     func showCorePickupAlertView(viewController:UIViewController) {
-        
-        
-               // viewController.view.frame = CGRectMake(20, 150, 100, 100)
         
         self.addViewControllerAsChildViewController(viewController)
         let currentWindow = UIApplication.sharedApplication().keyWindow

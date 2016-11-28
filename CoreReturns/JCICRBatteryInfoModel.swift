@@ -2,7 +2,7 @@
 //  JCICRBatteryInfoModel.swift
 //  CoreReturns
 //
-//  Created by Vaibhav on 23/11/16.
+//  Created by Mobility on 23/11/16.
 //  Copyright © 2016 Mobility. All rights reserved.
 //
 

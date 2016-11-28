@@ -31,12 +31,5 @@ class JCICRViewBolViewController: UIViewController {
         showDriverInformation()
         
     }
-    
-
-
-
-    
-
-
 
 }

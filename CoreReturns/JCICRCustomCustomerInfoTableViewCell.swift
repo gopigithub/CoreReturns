@@ -2,7 +2,7 @@
 //  JCICRCustomCustomerInfoTableViewCell.swift
 //  CoreReturns
 //
-//  Created by Vaibhav on 22/11/16.
+//  Created by Mobility on 22/11/16.
 //  Copyright © 2016 Mobility. All rights reserved.
 //
 
@@ -11,7 +11,6 @@ import UIKit
 class JCICRCustomCustomerInfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblInfo: UILabel!
-    
     @IBOutlet weak var txtDescription: UITextField!
     
     override func awakeFromNib() {
@@ -23,28 +22,39 @@ class JCICRCustomCustomerInfoTableViewCell: UITableViewCell {
         
         switch (keyType) {
             
-        case textFieldKeyBoardType.editable:
-//            txtDescription.layer.borderWidth = 1
-//            txtDescription.layer.cornerRadius = 1
-//            txtDescription.layer.borderColor = UIColor.blackColor().CGColor
+        case textFieldKeyBoardType.editableWithButton:
+
             txtDescription.userInteractionEnabled = true
+            self.setTextFieldRightViewButton()
         
-        case textFieldKeyBoardType.nonEditable:
-//            txtDescription.layer.borderWidth = 0
-//            txtDescription.layer.cornerRadius = 0
-//            txtDescription.layer.borderColor = UIColor.clearColor().CGColor
-//            txtDescription.layer.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0).CGColor
-            txtDescription.userInteractionEnabled = false
+        case textFieldKeyBoardType.editableWithoutButton:
+
+            txtDescription.userInteractionEnabled = true
             
         case textFieldKeyBoardType.popOver:
-//            txtDescription.layer.borderWidth = 1
-//            txtDescription.layer.cornerRadius = 1
-//            txtDescription.layer.borderColor = UIColor.blackColor().CGColor
+
             txtDescription.userInteractionEnabled = true
+            
             
         default:
             break
     }
+    }
+    func setTextFieldRightViewButton() {
+        
+        txtDescription.rightViewMode = UITextFieldViewMode.Always
+        let cameraBtn = UIButton(frame: CGRectMake(0, 0, 30, 30))
+        cameraBtn.setImage(UIImage(named: "btnCamera"), forState: UIControlState.Normal)
+        cameraBtn.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
+        cameraBtn.addTarget(self, action: "btnAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        txtDescription.rightView = cameraBtn
+        txtDescription.rightViewRectForBounds(CGRectMake(bounds.size.width-22, 6, 30, 30))
+    }
+    
+    func btnAction(sender:UIButton!) {
+        print("btn tapped")
+        
     }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

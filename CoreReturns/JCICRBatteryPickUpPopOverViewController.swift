@@ -1,14 +1,14 @@
 //
-//  JCICRCoreReturnsPickUpPopOverViewController.swift
+//  JCICRBatteryPickUpPopOverViewController.swift
 //  CoreReturns
 //
-//  Created by Vaibhav on 24/11/16.
+//  Created by Mobility on 24/11/16.
 //  Copyright © 2016 Mobility. All rights reserved.
 //
 
 import UIKit
 
-class JCICRCoreReturnsPickUpPopOverViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class JCICRBatteryPickUpPopOverViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var tblPopOver: UITableView!
      var items: [String] = ["We", "Heart", "Swift"]
@@ -68,8 +68,6 @@ class JCICRCoreReturnsPickUpPopOverViewController: UIViewController,UITableViewD
             self.dataSource.append(objJCICRCorePopOver7)
             self.dataSource.append(objJCICRCorePopOver8)
             self.dataSource.append(objJCICRCorePopOver9)
-        
-        
         
         }
         

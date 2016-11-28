@@ -106,9 +106,9 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
         }
         else {
             if(isFromCoreReturns) {
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:NSBundle.mainBundle())
                 
-                let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("customerInfoView") as! JCICRCoreReturnsCustomerInfoViewController
+                let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("customerInfoView") as! JCICRFinalCustomerInfoViewController
                 //delegate?.removeData(selectedIndexPath)
                 self.navigationController?.pushViewController(nextViewController, animated: true)
             }

@@ -11,10 +11,7 @@ import UIKit
 class JCICRCustomJobCardTableViewCell: UITableViewCell {
 
     @IBOutlet var cardView: UIView!
-
     @IBOutlet var cardImage: UIImageView!
-
-    
     @IBOutlet var cardDescription: UILabel!
     
     override func awakeFromNib() {

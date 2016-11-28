@@ -1,5 +1,5 @@
 //
-//  JCICRCoreReturnsAvailableViewController.swift
+//  JCICRAvailableAlertViewController.swift
 //  CoreReturns
 //
 //  Created by Mobility on 21/11/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JCICRCoreReturnsAvailableViewController: UIViewController {
+class JCICRAvailableAlertViewController: UIViewController {
     
     
     @IBOutlet weak var coreReturnsAlertView: UIView!
@@ -52,7 +52,7 @@ class JCICRCoreReturnsAvailableViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "showCoreReturnsInfo") {
-            let viewController = segue.destinationViewController as! JCICRCoreReturnsInformationViewController
+            let viewController = segue.destinationViewController as! JCICRBatteryInformationViewController
             viewController.batteryName = self.batteryName
         }
     }
