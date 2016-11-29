@@ -24,24 +24,19 @@ class JCICRCustomInfoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setTextFieldRightView() {
+    func setTextFieldRightView(viewcontrollerRef : UIViewController) {
 
         txtDescription.rightViewMode = UITextFieldViewMode.Always
         let cameraBtn = UIButton(frame: CGRectMake(0, 0, 30, 30))
         cameraBtn.setImage(UIImage(named: "btnCamera"), forState: UIControlState.Normal)
         cameraBtn.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
-        cameraBtn.addTarget(self, action: "btnAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        cameraBtn.addTarget(viewcontrollerRef, action: "btnAction", forControlEvents: UIControlEvents.TouchUpInside)
 
         txtDescription.rightView = cameraBtn
         txtDescription.rightViewRectForBounds(CGRectMake(bounds.size.width-22, 6, 30, 30))
     }
-    
-    func btnAction(sender:UIButton!) {
-        print("btn tapped")
-        
-    }
-    
-    func setTextFieldRightView (keyType:textFieldRightView) {
+
+    func setTextFieldRightView (keyType:textFieldRightView, viewcontrollerRef : UIViewController) {
          switch (keyType) {
          case .editable :
                 txtDescription.layer.borderWidth = 1
@@ -49,7 +44,7 @@ class JCICRCustomInfoTableViewCell: UITableViewCell {
                 txtDescription.layer.borderColor = UIColor.blackColor().CGColor
                 txtDescription.backgroundColor = UIColor.whiteColor()
                 txtDescription.userInteractionEnabled = true
-               self.setTextFieldRightView()
+               self.setTextFieldRightView(viewcontrollerRef)
          case .nonEditable :
                 txtDescription.layer.borderWidth = 0
                 txtDescription.layer.cornerRadius = 0
@@ -57,11 +52,7 @@ class JCICRCustomInfoTableViewCell: UITableViewCell {
                 txtDescription.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
                 txtDescription.textColor = UIColor.whiteColor()
                 txtDescription.userInteractionEnabled = false
-     
-         default:
-            break
-            
-            
+
         }
     }
 

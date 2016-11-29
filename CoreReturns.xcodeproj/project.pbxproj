@@ -29,7 +29,6 @@
 		69F7C0CC1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7C0CB1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift */; };
 		800FF5941DE45630006E8473 /* JCICRCustomCustomerInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800FF5931DE45630006E8473 /* JCICRCustomCustomerInfoTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		80148D541DE5602F0060AFBE /* JCICRBatteryInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80148D531DE5602F0060AFBE /* JCICRBatteryInfoModel.swift */; settings = {ASSET_TAGS = (); }; };
-		801C86421DEC724D00A4DDF9 /* JCICRCustomBarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C86411DEC724D00A4DDF9 /* JCICRCustomBarcodeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		801E99BD1DD5D66E00EE58A6 /* JCICRCustomBatteryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E99BC1DD5D66E00EE58A6 /* JCICRCustomBatteryInfoTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		807465EA1DD491F80074B7B7 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465E91DD491F80074B7B7 /* GoogleMapsBase.framework */; settings = {ASSET_TAGS = (); }; };
 		807465EC1DD492280074B7B7 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807465EB1DD492280074B7B7 /* GoogleMaps.framework */; settings = {ASSET_TAGS = (); }; };
@@ -50,6 +49,7 @@
 		8074660A1DD493270074B7B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807466091DD493270074B7B7 /* UIKit.framework */; };
 		809D2DC01DE5C624007A81A9 /* JCICRBatteryPickUpInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809D2DBF1DE5C624007A81A9 /* JCICRBatteryPickUpInfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		809D2DC21DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809D2DC11DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift */; settings = {ASSET_TAGS = (); }; };
+		80A515DF1DED638600E3C787 /* JCICRPickUpBatteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A515DE1DED638600E3C787 /* JCICRPickUpBatteryModel.swift */; settings = {ASSET_TAGS = (); }; };
 		80AB64A91DE6F2C700F810F5 /* JCICRBatteryPickUpPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB64A81DE6F2C700F810F5 /* JCICRBatteryPickUpPopOverViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		80AB64AB1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB64AA1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift */; settings = {ASSET_TAGS = (); }; };
 		80BF099D1DE8764500EA2AAC /* JCICRFinalCustomerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF099C1DE8764500EA2AAC /* JCICRFinalCustomerInfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -105,7 +105,6 @@
 		69F7C0CB1DCDEA1A003D6908 /* JCICRBatteryInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRBatteryInfoViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		800FF5931DE45630006E8473 /* JCICRCustomCustomerInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRCustomCustomerInfoTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		80148D531DE5602F0060AFBE /* JCICRBatteryInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRBatteryInfoModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		801C86411DEC724D00A4DDF9 /* JCICRCustomBarcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCICRCustomBarcodeViewController.swift; sourceTree = "<group>"; };
 		801E99BC1DD5D66E00EE58A6 /* JCICRCustomBatteryInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRCustomBatteryInfoTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		807465E91DD491F80074B7B7 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
 		807465EB1DD492280074B7B7 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		807466091DD493270074B7B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		809D2DBF1DE5C624007A81A9 /* JCICRBatteryPickUpInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRBatteryPickUpInfoViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		809D2DC11DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRCorePickUpInfoModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		80A515DE1DED638600E3C787 /* JCICRPickUpBatteryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRPickUpBatteryModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		80AB64A81DE6F2C700F810F5 /* JCICRBatteryPickUpPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRBatteryPickUpPopOverViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		80AB64AA1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRCorePickUpPopOverModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		80BF099C1DE8764500EA2AAC /* JCICRFinalCustomerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = JCICRFinalCustomerInfoViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -253,8 +253,9 @@
 			children = (
 				80C4B7111DEC07DA00787F07 /* JCICRCustomerInfoModel.swift */,
 				80148D531DE5602F0060AFBE /* JCICRBatteryInfoModel.swift */,
-				809D2DC11DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift */,
 				80AB64AA1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift */,
+				809D2DC11DE5D533007A81A9 /* JCICRCorePickUpInfoModel.swift */,
+				80A515DE1DED638600E3C787 /* JCICRPickUpBatteryModel.swift */,
 			);
 			name = ModelClass;
 			sourceTree = "<group>";
@@ -277,7 +278,6 @@
 				809D2DBF1DE5C624007A81A9 /* JCICRBatteryPickUpInfoViewController.swift */,
 				80AB64A81DE6F2C700F810F5 /* JCICRBatteryPickUpPopOverViewController.swift */,
 				80BF099C1DE8764500EA2AAC /* JCICRFinalCustomerInfoViewController.swift */,
-				801C86411DEC724D00A4DDF9 /* JCICRCustomBarcodeViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -435,6 +435,7 @@
 				80AB64AB1DE6F66900F810F5 /* JCICRCorePickUpPopOverModel.swift in Sources */,
 				80EC0DE61DE31F7A00E756A6 /* JCICRBatteryInformationViewController.swift in Sources */,
 				69E04F4D1DD0CACF00B38FC0 /* JCICRDigitalSignatureViewController.swift in Sources */,
+				80A515DF1DED638600E3C787 /* JCICRPickUpBatteryModel.swift in Sources */,
 				6988FA781DCDD935001C7AAA /* JCICRCustomPickUPTableViewCell.swift in Sources */,
 				800FF5941DE45630006E8473 /* JCICRCustomCustomerInfoTableViewCell.swift in Sources */,
 				69E04F491DD0C9CE00B38FC0 /* JCICRDamageReportViewController.swift in Sources */,
@@ -454,7 +455,6 @@
 				801E99BD1DD5D66E00EE58A6 /* JCICRCustomBatteryInfoTableViewCell.swift in Sources */,
 				69E04F471DD0C93A00B38FC0 /* JCICRScanPalletViewController.swift in Sources */,
 				80BF099D1DE8764500EA2AAC /* JCICRFinalCustomerInfoViewController.swift in Sources */,
-				801C86421DEC724D00A4DDF9 /* JCICRCustomBarcodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

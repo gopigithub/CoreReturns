@@ -94,11 +94,11 @@ extension UIViewController {
         currentWindow!.addSubview(viewController.view)
         
     }
-    func showCoreAlertView() {
+    func showCoreAlertView(batteryName:String) {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let viewController = storyboard.instantiateViewControllerWithIdentifier("coreAlertViewController") as! JCICRAvailableAlertViewController
         viewController.view.frame = CGRectMake(0, 50, 100, 100)
-        
+        viewController.batteryName = batteryName
         self.addViewControllerAsChildViewController(viewController)
         let currentWindow = UIApplication.sharedApplication().keyWindow
         currentWindow?.addSubview(viewController.view)

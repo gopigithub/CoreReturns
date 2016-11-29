@@ -10,7 +10,8 @@ import UIKit
 enum textFieldKeyBoardType : Int {
     case editableWithButton = 0
     case editableWithoutButton = 1
-    case popOver = 2
+    case etnPopOver = 2
+    case condtionPopOVer = 3
     
 }
 

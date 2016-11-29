@@ -18,7 +18,6 @@ class JCICRBatteryPickUpPopOverViewController: UIViewController,UITableViewDataS
     var dataSource : [JCICRCorePickUpPopOverModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.isETNTapped = true
         self.setDataSource()
         self.tblPopOver.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.tblPopOver.dataSource = self

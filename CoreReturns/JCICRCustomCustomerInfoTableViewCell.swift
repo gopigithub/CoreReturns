@@ -17,7 +17,7 @@ class JCICRCustomCustomerInfoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func setTextFieldType (keyType:textFieldKeyBoardType) {
+    func setTextFieldType (keyType:textFieldKeyBoardType , viewcontrollerRef : UIViewController) {
         
         
         switch (keyType) {
@@ -25,35 +25,37 @@ class JCICRCustomCustomerInfoTableViewCell: UITableViewCell {
         case textFieldKeyBoardType.editableWithButton:
 
             txtDescription.userInteractionEnabled = true
-            self.setTextFieldRightViewButton()
+            self.setTextFieldRightViewButton(viewcontrollerRef)
         
         case textFieldKeyBoardType.editableWithoutButton:
 
             txtDescription.userInteractionEnabled = true
             
-        case textFieldKeyBoardType.popOver:
+        case textFieldKeyBoardType.etnPopOver:
 
             txtDescription.userInteractionEnabled = true
             
-            
-        default:
-            break
+        case textFieldKeyBoardType.condtionPopOVer:
+            txtDescription.userInteractionEnabled = true
+
     }
     }
-    func setTextFieldRightViewButton() {
+    func setTextFieldRightViewButton(viewcontrollerRef : UIViewController) {
         
         txtDescription.rightViewMode = UITextFieldViewMode.Always
         let cameraBtn = UIButton(frame: CGRectMake(0, 0, 30, 30))
         cameraBtn.setImage(UIImage(named: "btnCamera"), forState: UIControlState.Normal)
         cameraBtn.backgroundColor = UIColor(red: 30/255.0, green: 189/255.0, blue: 178/255.0, alpha: 1.0)
-        cameraBtn.addTarget(self, action: "btnAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        cameraBtn.addTarget(viewcontrollerRef, action: "btnAction", forControlEvents: UIControlEvents.TouchUpInside)
         
         txtDescription.rightView = cameraBtn
         txtDescription.rightViewRectForBounds(CGRectMake(bounds.size.width-22, 6, 30, 30))
     }
     
     func btnAction(sender:UIButton!) {
-        print("btn tapped")
+       // self.showCoreAlertView("")
+       // showCorePickupAlertView()
+        
         
     }
     override func setSelected(selected: Bool, animated: Bool) {

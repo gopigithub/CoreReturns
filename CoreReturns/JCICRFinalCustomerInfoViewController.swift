@@ -14,6 +14,8 @@ class JCICRFinalCustomerInfoViewController: UIViewController,UITableViewDataSour
     var customerItems :[JCICRCustomerInfoModel] = []
     var crnItems : [JCICRCustomerInfoModel] = []
     var dataSource : [[JCICRCustomerInfoModel]] = []
+    var delegate : RemoveTableDataSourceDelegate?
+    var selectedIndexPath = Int()
     
     @IBOutlet weak var tblInfo: UITableView!
     @IBOutlet weak var btnFinish: UIButton!
@@ -94,14 +96,18 @@ class JCICRFinalCustomerInfoViewController: UIViewController,UITableViewDataSour
         self.dataSource.append(self.crnItems)
         
     }
-    
+    func btnAction() {
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let objJCICRBatteryPickUpInfoViewController = storyboard.instantiateViewControllerWithIdentifier("corePickupAlertViewController") as! JCICRBatteryPickUpInfoViewController
+        showCorePickupAlertView(objJCICRBatteryPickUpInfoViewController)
+    }
     
     @IBAction func finishBtnTapped(sender: AnyObject) {
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:NSBundle.mainBundle())
         
         let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("homeView") as! JCICRHomeViewController
-        //delegate?.removeData(selectedIndexPath)
+        delegate?.removeData(selectedIndexPath)
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
@@ -129,7 +135,7 @@ class JCICRFinalCustomerInfoViewController: UIViewController,UITableViewDataSour
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.lblInformation.text = objJCICRCustomerInfoModel.leftDataSource
         cell.txtDescription?.text = objJCICRCustomerInfoModel.rightDataSource
-        cell.setTextFieldRightView(objJCICRCustomerInfoModel.textFieldRightButton)
+        cell.setTextFieldRightView(objJCICRCustomerInfoModel.textFieldRightButton, viewcontrollerRef: self)
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         return cell

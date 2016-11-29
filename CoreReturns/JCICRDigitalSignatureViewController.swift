@@ -18,7 +18,7 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
     var alert = UIAlertView()
     
     var isFromCoreReturns = false
-    var delegate : RemoveTableDataSourceDelegate?
+   // var delegate : RemoveTableDataSourceDelegate?
     var selectedIndexPath = Int()
     
     @IBOutlet weak var lblBatteryNo: UILabel!
@@ -109,11 +109,12 @@ class JCICRDigitalSignatureViewController: UIViewController,UIAlertViewDelegate 
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:NSBundle.mainBundle())
                 
                 let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("customerInfoView") as! JCICRFinalCustomerInfoViewController
-                //delegate?.removeData(selectedIndexPath)
+               // nextViewController.delegate = self
+               // delegate?.removeData(selectedIndexPath)
                 self.navigationController?.pushViewController(nextViewController, animated: true)
             }
             else {
-                self.showCoreAlertView()
+                self.showCoreAlertView(batteryName)
             }
             
         }
